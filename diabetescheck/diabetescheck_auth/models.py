@@ -2,7 +2,8 @@ from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
 from django.db import models
-from oauth2_provider.models import AbstractApplication
+from journal.models import Person
+# from oauth2_provider.models import AbstractApplication
 
 
 class UserManager(BaseUserManager):
@@ -20,7 +21,8 @@ class UserManager(BaseUserManager):
             raise ValueError('Users must have an email address')
 
         user = self.model(
-            first_name, last_name, email=self.normalize_email(email),
+            first_name=first_name, last_name=last_name,
+            email=self.normalize_email(email),
             **extra_fields)
 
         user.set_password(password)
@@ -70,23 +72,23 @@ class User(AbstractBaseUser):
 
 class UserProfile(models.Model):
     """
-    Contains more details about a user
-    """
+    This model joins a user to a person
 
-    user = models.OneToOneField(User)
-    phone_number = models.CharField(max_length=50)
-    address = models.CharField(max_length=255, null=True)
-    city = models.CharField(max_length=255, null=True)
-    country = models.CharField(max_length=255)
-
-
-class OauthApplication(AbstractApplication):
     """
-    Oauth aplication table
-    Create an end point for registered OAUTH applications
-    """
+    user = models.OneToOneField(User, on_delete=models.PROTECT)
+    person = models.ForeignKey(Person, on_delete=models.PROTECT, null=True)
+
     def __str__(self):
-        return self.name or self.client_id
+        return '{} : {}'.format(self.user, self.person)
 
-    class Meta(object):
-        verbose_name = 'diabetescheck oauth application'
+
+# class OauthApplication(AbstractApplication):
+#     """
+#     Oauth aplication table
+#     Create an end point for registered OAUTH applications
+#     """
+#     def __str__(self):
+#         return self.name or self.client_id
+
+#     class Meta(object):
+#         verbose_name = 'diabetescheck oauth application'

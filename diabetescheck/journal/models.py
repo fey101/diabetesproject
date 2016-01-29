@@ -2,7 +2,6 @@ import datetime
 
 from django.core.validators import validate_email
 from django.db import models
-from django.conf import settings
 from django.utils import timezone
 
 from rest_framework.serializers import ValidationError
@@ -34,13 +33,15 @@ class Gender(models.Model):
     code = models.CharField(max_length=2),
     display = models.CharField(max_length=10)
 
+    # class Meta(object):
+    #     ordering = ('code',)
+
 
 class Valueset(models.Model):
     code = models.CharField(max_length=255),
     display = models.CharField(max_length=10)
 
     class Meta(object):
-        ordering = ('code',)
         abstract = True
 
     def __str__(self):
@@ -126,19 +127,6 @@ class Person(models.Model):
 
     def __str__(self):
         return self.get_full_name()
-
-
-class UserProfile(models.Model):
-    """
-    This model joins a user to a person
-
-    """
-    user = models.OneToOneField(
-        settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
-    person = models.ForeignKey(Person, on_delete=models.PROTECT)
-
-    def __str__(self):
-        return '{} : {}'.format(self.user, self.person)
 
 
 class PersonPhoto(Attachment):
@@ -251,7 +239,7 @@ class Contact(models.Model):
 class Medication(models.Model):
     name = models.CharField(max_length=255)
     # Amount administered in one dose
-    dose = models.DecimalField(decimal_places=2)
+    dose = models.DecimalField(max_digits=10, decimal_places=2)
     # administration frequency per day
     dosage = models.IntegerField()
     description = models.CharField(max_length=255)
@@ -259,10 +247,10 @@ class Medication(models.Model):
 
 class HealthDetails(models.Model):
     person = models.OneToOneField(Person, related_name='person_healthdetails')
-    weight = models.DecimalField(decimal_places=4)
-    height = models.DecimalField(decimal_places=4)
-    abdominal_girth = models.DecimalField(decimal_places=2)
-    fasting_glucose = models.DecimalField(decimal_places=4)
+    weight = models.DecimalField(max_digits=10, decimal_places=4)
+    height = models.DecimalField(max_digits=10, decimal_places=4)
+    abdominal_girth = models.DecimalField(max_digits=10, decimal_places=2)
+    fasting_glucose = models.DecimalField(max_digits=10, decimal_places=4)
     systole = models.IntegerField()
     diastole = models.IntegerField()
     time_taken = models.DateTimeField(default=timezone.now)

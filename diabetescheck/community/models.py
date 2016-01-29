@@ -40,7 +40,7 @@ class MessageAbstractBase(models.Model):
 
     class Meta(object):
         abstract = True
-        ordering = ('read', '-created',)
+        ordering = ('read',)
 
 
 class UserMessage(MessageAbstractBase):

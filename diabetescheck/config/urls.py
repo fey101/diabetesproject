@@ -17,8 +17,8 @@ from django.conf.urls import include, url
 from django.conf import settings
 
 urlpatterns = [
-    url(r'^o/',
-        include('oauth2_provider.urls', namespace='oauth2_provider')),
+    # url(r'^o/',
+    #     include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^accounts/',
         include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/auth/',

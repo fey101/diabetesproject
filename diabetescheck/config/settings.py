@@ -39,15 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'oauth2_provider',
+    # 'oauth2_provider',
     'corsheaders',
     'rest_framework',
 
     # local apps
     'diabetescheck_auth',
     'community',
-    # 'journal',
-    # 'planner',
+    'journal',
+    'planner',
     'recipe',
 ]
 
@@ -60,8 +60,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'oauth2_provider.middleware.OAuth2TokenMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
+    # 'oauth2_provider.middleware.OAuth2TokenMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -120,10 +120,10 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer',
         'rest_framework.renderers.JSONRenderer',
     ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-        'oauth2_provider.ext.rest_framework.OAuth2Authentication',
-    ),
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework.authentication.SessionAuthentication',
+    #     'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+    # ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
@@ -143,7 +143,7 @@ REST_FRAMEWORK = {
     'DATE_FORMAT': 'iso-8601',
     'TIME_FORMAT': 'iso-8601',
 }
-OAUTH2_PROVIDER_APPLICATION_MODEL = 'diabetescheck_auth.OauthApplication'
+# OAUTH2_PROVIDER_APPLICATION_MODEL = 'diabetescheck_auth.OauthApplication'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/

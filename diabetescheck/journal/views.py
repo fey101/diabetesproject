@@ -8,7 +8,6 @@ from .serializers import (
     ContactTypeSerializer,
     MedicationSerializer,
     HealthDetailsSerializer,
-    PersonIDSerializer,
     PersonPhotoSerializer,
     PersonSerializer,
     ContactSerializer,
@@ -22,7 +21,6 @@ from .models import (
     ContactType,
     Medication,
     HealthDetails,
-    PersonID,
     PersonPhoto,
     Person,
     Contact,
@@ -50,16 +48,6 @@ class ContactListView(ListCreateAPIView):
 class ContactDetailView(RetrieveUpdateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
-
-
-class PersonIDListView(ListCreateAPIView):
-    queryset = PersonID.objects.all()
-    serializer_class = PersonIDSerializer
-
-
-class PersonIDDetailView(RetrieveUpdateAPIView):
-    queryset = PersonID.objects.all()
-    serializer_class = PersonIDSerializer
 
 
 class PersonPhotoListView(ListCreateAPIView):

@@ -7,7 +7,6 @@ from .models import (
     ContactType,
     Medication,
     HealthDetails,
-    PersonID,
     PersonPhoto,
     Person,
     Contact,
@@ -39,11 +38,6 @@ class PersonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Person
-
-
-class PersonIDSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PersonID
 
 
 class PersonLanguageSerializer(serializers.ModelSerializer):

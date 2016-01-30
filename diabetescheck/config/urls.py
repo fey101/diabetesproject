@@ -27,10 +27,10 @@ urlpatterns = [
         include('recipe.urls', namespace='recipe')),
     # url(r'^api/planner/',
     #     include('planner.urls', namespace='planner')),
-    # url(r'^api/journal/',
-    #     include('journal.urls', namespace='journal')),
-    # url(r'^api/community/',
-    #     include('community.urls', namespace='community')),
+    url(r'^api/journal/',
+        include('journal.urls', namespace='journal')),
+    url(r'^api/community/',
+        include('community.urls', namespace='community')),
     url(r'^static/(?P<path>.*)$',
         'django.views.static.serve', {'document_root': settings.STATIC_ROOT})
 ]

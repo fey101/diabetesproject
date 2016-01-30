@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from .views import (
     GenderListView,
@@ -13,10 +13,8 @@ from .views import (
     MedicationDetailView,
     HealthDetailsListView,
     HealthDetailsDetailView,
-    PersonIDListView,
-    PersonIDDetailView,
-    PersonPhotoListView,
-    PersonPhotoDetailView,
+    # PersonPhotoListView,
+    # PersonPhotoDetailView,
     PersonListView,
     PersonListDetailView,
     ContactListView,
@@ -25,8 +23,7 @@ from .views import (
     PersonLanguageDetailView,
 )
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'^persons/$', PersonListView.as_view(),
         name='persons'),
     url(r'^persons/(?P<pk>[^/]+)/$', PersonListDetailView.as_view(),
@@ -37,15 +34,10 @@ urlpatterns = patterns(
     url(r'^contacts/(?P<pk>[^/]+)/$', ContactDetailView.as_view(),
         name='contacts_detail'),
 
-    url(r'^user_identification/$', PersonIDListView.as_view(),
-        name='user_identification'),
-    url(r'^user_identification/(?P<pk>[^/]+)/$', PersonIDDetailView.as_view(),
-        name='user_identification_detail'),
-
-    url(r'^user_photo/$', PersonPhotoListView.as_view(),
-        name='user_photo'),
-    url(r'^user_photo/(?P<pk>[^/]+)/$', PersonPhotoDetailView.as_view(),
-        name='user_photo_detail'),
+    # url(r'^user_photo/$', PersonPhotoListView.as_view(),
+    #     name='user_photo'),
+    # url(r'^user_photo/(?P<pk>[^/]+)/$', PersonPhotoDetailView.as_view(),
+    #     name='user_photo_detail'),
 
     url(r'^person_language/$', PersonLanguageListView.as_view(),
         name='person_language_list'),
@@ -80,4 +72,4 @@ urlpatterns = patterns(
         name='health_details'),
     url(r'^health_details/(?P<pk>[^/]+)/$', HealthDetailsDetailView.as_view(),
         name='health_details_detail'),
-)
+]

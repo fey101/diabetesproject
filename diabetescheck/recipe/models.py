@@ -13,14 +13,6 @@ CATEGORY_OPTIONS = (
 )
 
 
-CALORIC_CONSTANTS = {
-    'proteins': 4,
-    'carbohydrates': 4,
-    'alcohol': 7,
-    'fats': 9
-}
-
-
 class Recipe(models.Model):
     """Available recipes."""
 

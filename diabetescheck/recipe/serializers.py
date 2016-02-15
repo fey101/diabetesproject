@@ -5,7 +5,7 @@ from .models import (
     Recipe,
     FoodItem,
     FoodCategory,
-    FoodItemCategory
+    NutritionalValue
 )
 
 
@@ -24,6 +24,6 @@ class FoodCategorySerializer(serializers.ModelSerializer):
         model = FoodCategory
 
 
-class FoodItemCategorySerializer(serializers.ModelSerializer):
+class NutritionalValueSerializer(serializers.ModelSerializer):
     class Meta:
-        model = FoodItemCategory
+        model = NutritionalValue

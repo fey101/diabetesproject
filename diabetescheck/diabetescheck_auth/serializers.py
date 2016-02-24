@@ -4,7 +4,7 @@ from rest_framework import serializers
 from .models import (
     User,
     UserProfile,
-    # OauthApplication,
+    OauthApplication,
 )
 
 
@@ -18,6 +18,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
         model = UserProfile
 
 
-# class OauthApplicationSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = OauthApplication
+class OauthApplicationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OauthApplication

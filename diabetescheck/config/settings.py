@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 'oauth2_provider',
+    'oauth2_provider',
     'corsheaders',
     'rest_framework',
 
@@ -60,8 +60,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'corsheaders.middleware.CorsMiddleware',
-    # 'oauth2_provider.middleware.OAuth2TokenMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'oauth2_provider.middleware.OAuth2TokenMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -87,9 +87,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-db_url = 'postgres://admin:admin@localhost:5432/diabetesproject'
+# db_url =
 
-DATABASES = {'default': dj_database_url.config(default=db_url)}
+DATABASES = {'default': dj_database_url.config(env='faithenv', default='postgres://admibn:admin123@localhost:5432/diabetesproject')}
+print (DATABASES)
 DATABASES['default']['CONN_MAX_AGE'] = 60
 
 # Password validation
@@ -120,12 +121,12 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer',
         'rest_framework.renderers.JSONRenderer',
     ),
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     'rest_framework.authentication.SessionAuthentication',
-    #     'oauth2_provider.ext.rest_framework.OAuth2Authentication',
-    # ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+    ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticated', # AllowAny
     ),
 
     # Pagination settings
@@ -143,7 +144,7 @@ REST_FRAMEWORK = {
     'DATE_FORMAT': 'iso-8601',
     'TIME_FORMAT': 'iso-8601',
 }
-# OAUTH2_PROVIDER_APPLICATION_MODEL = 'diabetescheck_auth.OauthApplication'
+OAUTH2_PROVIDER_APPLICATION_MODEL = 'diabetescheck_auth.OauthApplication'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/

@@ -32,7 +32,6 @@ setup(
         'sarge==0.1.4',
     ],
     scripts=[
-        'bin/diabetescheck_manage',
         'bin/run'
     ],
     include_package_data=True

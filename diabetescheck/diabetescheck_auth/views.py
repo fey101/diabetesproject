@@ -6,13 +6,13 @@ from rest_framework.generics import (
 from .models import (
     User,
     UserProfile,
-    # OauthApplication,
+    OauthApplication,
 )
 
 from .serializers import (
     UserSerializer,
     UserProfileSerializer,
-    # OauthApplicationSerializer,
+    OauthApplicationSerializer,
 )
 
 
@@ -42,14 +42,14 @@ class UserProfileDetailView(RetrieveUpdateDestroyAPIView):
     lookup_field = 'pk'
 
 
-# class OauthApplicationListView(ListCreateAPIView):
+class OauthApplicationListView(ListCreateAPIView):
 
-#     queryset = OauthApplication.objects.all()
-#     serializer_class = OauthApplicationSerializer
+    queryset = OauthApplication.objects.all()
+    serializer_class = OauthApplicationSerializer
 
 
-# class OauthApplicationDetailView(RetrieveUpdateDestroyAPIView):
+class OauthApplicationDetailView(RetrieveUpdateDestroyAPIView):
 
-#     queryset = OauthApplication.objects.all()
-#     serializer_class = OauthApplicationSerializer
-#     lookup_field = 'pk'
+    queryset = OauthApplication.objects.all()
+    serializer_class = OauthApplicationSerializer
+    lookup_field = 'pk'

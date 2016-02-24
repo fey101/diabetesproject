@@ -14,6 +14,11 @@ from .models import (
 )
 
 
+class CommunicationLanguageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CommunicationLanguage
+
+
 class ContactSerializer(serializers.ModelSerializer):
     person_name = serializers.ReadOnlyField(source='person.__str__')
     contact_type_name = serializers.ReadOnlyField(
@@ -35,6 +40,8 @@ class PersonSerializer(serializers.ModelSerializer):
         source='marital_status.display')
     contact_set = ContactSerializer(many=True, read_only=True)
     personphoto_set = PersonPhotoSerializer(many=True, read_only=True)
+    communnication_language_set = CommunicationLanguageSerializer(
+        source='communication_language.display')
 
     class Meta:
         model = Person
@@ -54,11 +61,6 @@ class GenderSerializer(serializers.ModelSerializer):
 class MaritalStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = MaritalStatus
-
-
-class CommunicationLanguageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CommunicationLanguage
 
 
 class ContactTypeSerializer(serializers.ModelSerializer):

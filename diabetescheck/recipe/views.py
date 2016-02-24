@@ -8,14 +8,14 @@ from .models import (
     Recipe,
     FoodItem,
     FoodCategory,
-    FoodItemCategory
+    NutritionalValue
 )
 
 from .serializers import (
     FoodItemSerializer,
     RecipeSerializer,
     FoodCategorySerializer,
-    FoodItemCategorySerializer
+    NutritionalValueSerializer
 )
 
 
@@ -52,7 +52,7 @@ class FoodCategoryListView(ListCreateAPIView):
 
     def create(self, request):
         from pdb import set_trace
-        set_trace
+        set_trace()
         data = request.data
         serializer = self.serializer_class(data=data)
         if serializer.is_valid():
@@ -78,14 +78,14 @@ class FoodCategoryDetailView(RetrieveUpdateDestroyAPIView):
     lookup_field = 'pk'
 
 
-class FoodItemCategoryListView(ListCreateAPIView):
+class NutritionalValueListView(ListCreateAPIView):
 
-    queryset = FoodItemCategory.objects.all()
-    serializer_class = FoodItemCategorySerializer
+    queryset = NutritionalValue.objects.all()
+    serializer_class = NutritionalValueSerializer
 
 
-class FoodItemCategoryDetailView(RetrieveUpdateDestroyAPIView):
+class NutritionalValueDetailView(RetrieveUpdateDestroyAPIView):
 
-    queryset = FoodItemCategory.objects.all()
-    serializer_class = FoodItemCategorySerializer
+    queryset = NutritionalValue.objects.all()
+    serializer_class = NutritionalValueSerializer
     lookup_field = 'pk'

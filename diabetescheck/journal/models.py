@@ -30,9 +30,12 @@ def get_directory(instance, filename):
 
 
 class Gender(models.Model):
-    code = models.CharField(max_length=2),
+    code = models.CharField(max_length=255),
     display = models.CharField(max_length=10)
 
+    def __str__(self):
+        """"Return display as string representation of Gender."""
+        return self.display
     # class Meta(object):
     #     ordering = ('code',)
 

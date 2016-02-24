@@ -7,8 +7,8 @@ from .views import (
     FoodItemDetailView,
     FoodCategoryListView,
     FoodCategoryDetailView,
-    FoodItemCategoryListView,
-    FoodItemCategoryDetailView
+    NutritionalValueListView,
+    NutritionalValueDetailView
 )
 
 
@@ -22,13 +22,13 @@ urlpatterns = [
     url(r'^food_items/(?P<pk>[0-9]+)$',
         FoodItemDetailView.as_view(), name='food_item_detail'),
 
-    url(r'^food_category/',
+    url(r'^food_categories/',
         FoodCategoryListView.as_view(), name='food_category_list'),
-    url(r'^food_category/(?P<pk>[0-9]+)$',
+    url(r'^food_categories/(?P<pk>[0-9]+)$',
         FoodCategoryDetailView.as_view(), name='food_category_detail'),
 
-    url(r'^fooditem_category/',
-        FoodItemCategoryListView.as_view(), name='fooditem_category_list'),
-    url(r'^fooditem_category/(?P<pk>[0-9]+)$',
-        FoodItemCategoryDetailView.as_view(), name='fooditem_category_detail'),
+    url(r'^nutritional_values/',
+        NutritionalValueListView.as_view(), name='nutritional_value_list'),
+    url(r'^nutritional_values/(?P<pk>[0-9]+)$',
+        NutritionalValueDetailView.as_view(), name='nutritional_value_detail'),
 ]

@@ -30,6 +30,7 @@ setup(
         'click==6.2',
         'dj-database-url==0.3.0',
         'sarge==0.1.4',
+        'ujson==1.34',
     ],
     scripts=[
         'bin/run'

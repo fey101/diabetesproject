@@ -33,6 +33,15 @@ class PersonPhotoSerializer(serializers.ModelSerializer):
         model = PersonPhoto
 
 
+class PersonLanguageSerializer(serializers.ModelSerializer):
+    person_name = serializers.ReadOnlyField(source="person.__str__")
+    communication_language_display = serializers.ReadOnlyField(
+        source="communication_language.display")
+
+    class Meta(object):
+        model = PersonLanguage
+
+
 class PersonSerializer(serializers.ModelSerializer):
     person_display = serializers.ReadOnlyField(source='__str__')
     gender_name = serializers.ReadOnlyField(source='gender.display')
@@ -40,17 +49,11 @@ class PersonSerializer(serializers.ModelSerializer):
         source='marital_status.display')
     contact_set = ContactSerializer(many=True, read_only=True)
     personphoto_set = PersonPhotoSerializer(many=True, read_only=True)
-    communnication_language_set = CommunicationLanguageSerializer(
-        source='communication_language.display')
+    communication_language_set = PersonLanguageSerializer(
+        many=True, read_only=True)
 
     class Meta:
         model = Person
-
-
-class PersonLanguageSerializer(serializers.ModelSerializer):
-
-    class Meta(object):
-        model = PersonLanguage
 
 
 class GenderSerializer(serializers.ModelSerializer):

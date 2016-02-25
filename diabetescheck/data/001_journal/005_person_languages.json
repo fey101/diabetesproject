@@ -1,0 +1,28 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "person": {
+                    "id": 1
+                },
+                "communication_language": {
+                    "id": 1
+                }
+            },
+            {
+                "id": 2,
+                "person": {
+                    "id": 1
+                },
+                "communication_language": {
+                    "id": 2
+                }
+            }
+        ],
+        "model": "journal.PersonLanguage",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

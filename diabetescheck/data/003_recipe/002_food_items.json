@@ -1,0 +1,15 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "name": "milk",
+                "amount": 500.0,
+            }
+        ],
+        "model": "recipe.FoodItem",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

@@ -42,11 +42,13 @@ class FoodItem(models.Model):
         """Return a string representation of the FoodItem."""
         return self.name
 
-    @property
-    def calories(self):
-        """Sum total of calories per consumed FoodItem."""
-        units_consumed = self.amount / 100
-        return self.fooditem_nutrients.calories_in_100g() * units_consumed
+    # @property
+    # def calories(self):
+    #     """Sum total of calories per consumed FoodItem."""
+    #     units_consumed = self.amount / 100
+    #     from pdb import set_trace
+    #     set_trace()
+    #     return self.fooditem_nutrients__calories_in_100g() * units_consumed
 
 
 class FoodCategory(models.Model):
@@ -78,3 +80,8 @@ class NutritionalValue(models.Model):
     def calories_in_100g(self):
         """Return calories contributed by a given nutrient in a food_item."""
         return self.category.caloric_value_per_gram * self.quantity_per_100g
+
+    def __str__(self):
+        """String representation of NutritionalValue class."""
+        return "food_item:{0}, category:{1}".format(
+            self.food_item.name, self.category.category)

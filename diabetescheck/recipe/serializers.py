@@ -14,7 +14,19 @@ class RecipeSerializer(serializers.ModelSerializer):
         model = Recipe
 
 
+class NutritionalValueSerializer(serializers.ModelSerializer):
+    fooditem_name = serializers.ReadOnlyField(source="food_item.name")
+    category_display = serializers.ReadOnlyField(source="category.category")
+
+    class Meta:
+        model = NutritionalValue
+
+
 class FoodItemSerializer(serializers.ModelSerializer):
+    calories = serializers.ReadOnlyField()
+    fooditem_nutrients = NutritionalValueSerializer(
+        many=True, read_only=True)
+
     class Meta:
         model = FoodItem
 
@@ -22,8 +34,3 @@ class FoodItemSerializer(serializers.ModelSerializer):
 class FoodCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodCategory
-
-
-class NutritionalValueSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = NutritionalValue

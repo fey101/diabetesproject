@@ -1,0 +1,30 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "email": "admin@diabetescheck.com",
+                "password": "pbkdf2_sha256$24000$rn5mii9dtQBS$tyY8UhWa4wKSBv7eH8zKgDjHmNTxzbakkEZLL/PslKs=",
+                "first_name": "Faith",
+                "last_name": "Kangai",
+                "is_admin": true,
+                "is_staff": false,
+                "is_initial": true,
+                "is_active": true
+
+            },
+            {
+                "id": 2,
+                "email": "admin2@diabetescheck.com",
+                "password": "pbkdf2_sha256$20000$NdnK84zZYjkt$f5btz29FtR/TGhQrbQKyDLs0VBSQYiKeXBHiBz2WCMU=",
+                "is_admin": true,
+                "is_staff": true,
+                "is_initial": false
+            }
+        ],
+        "model": "diabetescheck_auth.User",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

@@ -89,21 +89,30 @@ class Person(models.Model):
     Demographics and administrative information about a person independent
     of a specific health-related context
     """
+
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
     other_names = models.CharField(max_length=120, null=True, blank=True)
     gender = models.ForeignKey(Gender, on_delete=models.PROTECT)
     date_of_birth = models.DateField(verbose_name="Date of birth (YYYY-MM-DD)")
     marital_status = models.ForeignKey(MaritalStatus, on_delete=models.PROTECT)
-    communication_language = models.ManyToManyField(CommunicationLanguage)
+    communication_language = models.ManyToManyField(
+        CommunicationLanguage, through='PersonLanguage')
+
+    # @property
+    # def communication_language_set(self):
+    #     """Convinience method for aligning communication_language."""
+    #     return Person.objects.values("communication_language")
 
     def get_full_name(self):
-        """Return the identifying fullname for this User"""
+        """Return the identifying fullname for this User."""
         return " ".join([self.first_name, self.last_name])
 
     def validate_dob(self):
         """
-        Check that the date of birth is less than today
+        Check date of birth is within expected limits.
+
+        ... that is date of birth is less than today
         and less than 150 years
         """
         if self.date_of_birth:
@@ -145,9 +154,12 @@ class PersonLanguage(models.Model):
     """
     A person can have more than one communication Language
     """
-    person = models.ForeignKey(Person, on_delete=models.PROTECT)
+    person = models.ForeignKey(
+        Person, on_delete=models.PROTECT,
+        related_name="communication_language_set")
     communication_language = models.ForeignKey(
-        CommunicationLanguage, on_delete=models.PROTECT)
+        CommunicationLanguage, on_delete=models.PROTECT,
+        related_name="persons_set")
 
 
 class Contact(models.Model):

@@ -1,0 +1,24 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "first_name": "Fey101",
+                "last_name": "Kangai",
+                "other_names": "Gikundi",
+                "date_of_birth": "1992-11-17",
+                "gender": {
+                    "id": 2
+                },
+                "marital_status": {
+                    "id": 2
+                }
+            }
+        ],
+        "model": "journal.Person",
+        "unique_fields": [
+            "id"
+        ]
+
+    }
+]

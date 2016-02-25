@@ -99,11 +99,6 @@ class Person(models.Model):
     communication_language = models.ManyToManyField(
         CommunicationLanguage, through='PersonLanguage')
 
-    # @property
-    # def communication_language_set(self):
-    #     """Convinience method for aligning communication_language."""
-    #     return Person.objects.values("communication_language")
-
     def get_full_name(self):
         """Return the identifying fullname for this User."""
         return " ".join([self.first_name, self.last_name])

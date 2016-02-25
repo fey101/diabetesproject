@@ -1,0 +1,18 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "display": "English"
+            },
+            {
+                "id": 2,
+                "display": "Meru"
+            }
+        ],
+        "model": "journal.CommunicationLanguage",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

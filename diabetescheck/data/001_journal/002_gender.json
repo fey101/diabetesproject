@@ -1,0 +1,18 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "display": "Male"
+            },
+            {
+                "id": 2,
+                "display": "Female"
+            }
+        ],
+        "model": "journal.Gender",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

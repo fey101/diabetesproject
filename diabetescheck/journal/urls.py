@@ -39,9 +39,9 @@ urlpatterns = [
     # url(r'^user_photo/(?P<pk>[^/]+)/$', PersonPhotoDetailView.as_view(),
     #     name='user_photo_detail'),
 
-    url(r'^person_language/$', PersonLanguageListView.as_view(),
+    url(r'^person_languages/$', PersonLanguageListView.as_view(),
         name='person_language_list'),
-    url(r'^person_language/(?P<pk>[^/]+)/$',
+    url(r'^person_languages/(?P<pk>[^/]+)/$',
         PersonLanguageDetailView.as_view(), name='person_language_detail'),
 
     url(r'^gender/$', GenderListView.as_view(), name='gender'),

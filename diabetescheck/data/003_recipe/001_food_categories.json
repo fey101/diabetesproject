@@ -1,0 +1,45 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "category": "proteins",
+                "caloric_value_per_gram": 4.0
+            },
+            {
+                "id": 2,
+                "category": "carbohydrates",
+                "caloric_value_per_gram": 4.0
+            },
+            {
+                "id": 3,
+                "category": "fats",
+                "caloric_value_per_gram": 9.0
+            },
+            {
+                "id": 4,
+                "category": "alcohol",
+                "caloric_value_per_gram": 7.0
+            },
+            {
+                "id": 5,
+                "category": "vitamins",
+                "caloric_value_per_gram": 0
+            },
+            {
+                "id": 6,
+                "category": "minerals",
+                "caloric_value_per_gram": 0
+            },
+            {
+                "id": 7,
+                "category": "cholestrols",
+                "caloric_value_per_gram": 9.0
+            }
+        ],
+        "model": "recipe.FoodCategory",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

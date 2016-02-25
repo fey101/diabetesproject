@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'journal',
     'planner',
     'recipe',
+    'data_bootstrap',
+    'data',
 ]
 
 MIDDLEWARE_CLASSES = [

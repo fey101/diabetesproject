@@ -103,6 +103,7 @@ def setup(ctx):
     Delete the development database, recreate it, load data
     """
     ctx.invoke(reset)
+    ctx.invoke(load)
 
 
 @click.command()

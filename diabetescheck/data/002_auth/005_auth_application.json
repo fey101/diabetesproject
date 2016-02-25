@@ -1,0 +1,23 @@
+[
+    {
+        "records": [
+            {
+                "redirect_uris": "http://localhost:8030/",
+                "user": {
+                    "id": 1
+                },
+                "client_secret": "diabetescheck@siri",
+                "name": "DIABETESCHECK",
+                "authorization_grant_type": "password",
+                "client_id": "dbc254",
+                "id": 1,
+                "skip_authorization": false,
+                "client_type": "confidential"
+            }
+        ],
+        "model": "diabetescheck_auth.OauthApplication",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

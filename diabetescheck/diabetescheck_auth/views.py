@@ -73,12 +73,3 @@ class MeView(RetrieveAPIView):
         """The queryset equivalent."""
         return self.request.user
 
-
-@api_view(('GET', 'POST',))
-@permission_classes((AllowAny,))
-def dbcheck_login(request, *args, **kwargs):
-    """Call django's login view."""
-    # - request is set to Request in `rest_framework.request`
-    # - request._request is set to HttpRequest since `._request`
-    #   gets the underlying HttpRequest from rest_framework's Request
-    return login(request._request, *args, **kwargs)

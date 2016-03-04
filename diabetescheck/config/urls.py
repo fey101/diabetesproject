@@ -17,16 +17,13 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 
-from diabetescheck_auth.views import MeView, dbcheck_login
-
-template_name = {'template_name': 'rest_framework/login.html'}
+from diabetescheck_auth.views import MeView
 
 
 urlpatterns = [
     url(r'^o/',
         include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^me/$', MeView.as_view(), name='me'),
-    url(r'^accounts/login/$', dbcheck_login, template_name, name='login'),
     url(r'^accounts/',
         include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/auth/',

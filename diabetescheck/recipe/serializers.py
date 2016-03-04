@@ -4,9 +4,20 @@ from rest_framework import serializers
 from .models import (
     Recipe,
     FoodItem,
+    RecipeFoodItem,
     FoodCategory,
     NutritionalValue
 )
+
+
+class RecipeFoodItemSerializer(serializers.ModelSerializer):
+    """A serializer for RecipeFoodItem through table model."""
+
+    recipe_name = serializers.ReadOnlyField(source="recipe.name")
+    fooditem_name = serializers.ReadOnlyField(source="food_item.name")
+
+    class Meta:
+        model = RecipeFoodItem
 
 
 class RecipeSerializer(serializers.ModelSerializer):

@@ -19,7 +19,7 @@ class Recipe(models.Model):
     user = models.ForeignKey(Person)
     name = models.CharField(max_length=255)
     ingredients = models.ManyToManyField(
-        'FoodItem', related_name='FoodItem_recipes')
+        'FoodItem', through='RecipeFoodItem', related_name='FoodItem_recipes',)
     instructions = models.TextField()
     prep_time = models.DurationField()
     serving = models.IntegerField()
@@ -49,6 +49,13 @@ class FoodItem(models.Model):
     #     from pdb import set_trace
     #     set_trace()
     #     return self.fooditem_nutrients__calories_in_100g() * units_consumed
+
+
+class RecipeFoodItem(models.Model):
+    """A through table for ingredients manytomany field in Recipe model."""
+
+    recipe = models.ForeignKey(Recipe, related_name='recipe_fooditem')
+    food_item = models.ForeignKey(FoodItem, related_name='constituent_recipe')
 
 
 class FoodCategory(models.Model):

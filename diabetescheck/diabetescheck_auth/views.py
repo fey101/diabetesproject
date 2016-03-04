@@ -1,7 +1,15 @@
+from django.contrib.auth.views import login
+
 from rest_framework.generics import (
     ListCreateAPIView,
     RetrieveUpdateDestroyAPIView,
+    RetrieveAPIView,
 )
+from rest_framework.decorators import (
+    api_view,
+    permission_classes
+)
+from rest_framework.permissions import AllowAny
 
 from .models import (
     User,
@@ -53,3 +61,24 @@ class OauthApplicationDetailView(RetrieveUpdateDestroyAPIView):
     queryset = OauthApplication.objects.all()
     serializer_class = OauthApplicationSerializer
     lookup_field = 'pk'
+
+
+class MeView(RetrieveAPIView):
+    """A view showing only the details of logged in user."""
+
+    queryset = None
+    serializer_class = UserSerializer
+
+    def get_object(self):
+        """The queryset equivalent."""
+        return self.request.user
+
+
+@api_view(('GET', 'POST',))
+@permission_classes((AllowAny,))
+def dbcheck_login(request, *args, **kwargs):
+    """Call django's login view."""
+    # - request is set to Request in `rest_framework.request`
+    # - request._request is set to HttpRequest since `._request`
+    #   gets the underlying HttpRequest from rest_framework's Request
+    return login(request._request, *args, **kwargs)

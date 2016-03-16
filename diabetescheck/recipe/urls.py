@@ -8,11 +8,18 @@ from .views import (
     FoodCategoryListView,
     FoodCategoryDetailView,
     NutritionalValueListView,
-    NutritionalValueDetailView
+    NutritionalValueDetailView,
+    RecipeFoodItemListView,
+    RecipeFoodItemDetailView,
 )
 
 
 urlpatterns = [
+    url(r'^recipe_fooditems/', RecipeFoodItemListView.as_view(),
+        name='recipe_fooditem_list'),
+    url(r'^recipe_fooditem/(?P<pk>[0-9]+)$',
+        RecipeFoodItemDetailView.as_view(), name='recipe_fooditem_detail'),
+
     url(r'^recipes/', RecipeListView.as_view(), name='recipe_list'),
     url(r'^recipes/(?P<pk>[0-9]+)$',
         RecipeDetailView.as_view(), name='recipe_detail'),

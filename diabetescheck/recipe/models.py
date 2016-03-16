@@ -9,6 +9,7 @@ CATEGORY_OPTIONS = (
     ('fats', 'Fats and Oils'),
     ('vitamins', 'Vitamin'),
     ('cholestrols', 'Cholestrol'),
+    ('fiber', 'Fiber'),
     ('minerals', 'Mineral')
 )
 
@@ -16,10 +17,11 @@ CATEGORY_OPTIONS = (
 class Recipe(models.Model):
     """Available recipes."""
 
-    user = models.ForeignKey(Person)
+    person = models.ForeignKey(Person)
     name = models.CharField(max_length=255)
+    description = models.CharField(max_length=255, blank=True, null=True)
     ingredients = models.ManyToManyField(
-        'FoodItem', related_name='FoodItem_recipes')
+        'FoodItem', through='RecipeFoodItem', related_name='foodItem_recipes',)
     instructions = models.TextField()
     prep_time = models.DurationField()
     serving = models.IntegerField()
@@ -28,6 +30,16 @@ class Recipe(models.Model):
         """String representation of Recipe."""
         return self.name
 
+    @property
+    def nutrition_details_per_serving(self):
+        """Return total calories divided by no of servings."""
+        pass
+
+    @property
+    def ingredients_list(self):
+        """Get the food item objects related to a particular recipe."""
+        return self.ingredients.select_related()
+
 
 class FoodItem(models.Model):
     """A distinguishable, simplest food item/ingredient."""
@@ -35,8 +47,7 @@ class FoodItem(models.Model):
     name = models.CharField(max_length=255)
     nutritional_value = models.ManyToManyField(
         'FoodCategory', through='NutritionalValue')
-    # quantity of FoodItem consumed in grams
-    amount = models.FloatField()
+    description = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         """Return a string representation of the FoodItem."""
@@ -49,6 +60,13 @@ class FoodItem(models.Model):
     #     from pdb import set_trace
     #     set_trace()
     #     return self.fooditem_nutrients__calories_in_100g() * units_consumed
+
+
+class RecipeFoodItem(models.Model):
+    """A through table for ingredients manytomany field in Recipe model."""
+
+    recipe = models.ForeignKey(Recipe, related_name='recipe_fooditem')
+    food_item = models.ForeignKey(FoodItem, related_name='constituent_recipe')
 
 
 class FoodCategory(models.Model):
@@ -75,11 +93,16 @@ class NutritionalValue(models.Model):
         'FoodItem', related_name="fooditem_nutrients")
     category = models.ForeignKey(
         'FoodCategory', related_name="category_nutrients")
-    quantity_per_100g = models.FloatField()
+    # quantity of FoodItem consumed in grams
+    amount = models.FloatField()
+    measurement_unit = models.CharField(max_length=255)
+    quantity_per_unit = models.FloatField()
 
-    def calories_in_100g(self):
+    @property
+    def calories_in_units_consumed(self):
         """Return calories contributed by a given nutrient in a food_item."""
-        return self.category.caloric_value_per_gram * self.quantity_per_100g
+        total_consumption = self.amount * self.quantity_per_unit
+        return self.category.caloric_value_per_gram * total_consumption
 
     def __str__(self):
         """String representation of NutritionalValue class."""

@@ -8,15 +8,28 @@ from .models import (
     Recipe,
     FoodItem,
     FoodCategory,
-    NutritionalValue
+    NutritionalValue,
+    RecipeFoodItem,
 )
 
 from .serializers import (
     FoodItemSerializer,
     RecipeSerializer,
     FoodCategorySerializer,
-    NutritionalValueSerializer
+    NutritionalValueSerializer,
+    RecipeFoodItemSerializer,
 )
+
+
+class RecipeFoodItemListView(ListCreateAPIView):
+    queryset = RecipeFoodItem.objects.all()
+    serializer_class = RecipeFoodItemSerializer
+
+
+class RecipeFoodItemDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = RecipeFoodItem.objects.all()
+    serializer_class = RecipeFoodItemSerializer
+    lookup_field = 'pk'
 
 
 class RecipeListView(ListCreateAPIView):

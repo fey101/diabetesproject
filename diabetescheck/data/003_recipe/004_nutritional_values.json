@@ -1,0 +1,58 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "quantity_per_unit": 300.0,
+                "food_item": {
+                    "id": 1
+                },
+                "category": {
+                    "id": 1
+                },
+                "amount": 1,
+                "measurement_unit": "tetrapack"
+            },
+            {
+                "id": 2,
+                "quantity_per_unit": 200.0,
+                "food_item": {
+                    "id": 1
+                },
+                "category": {
+                    "id": 2
+                },
+                "amount": 1,
+                "measurement_unit": "tetrapack"
+            },
+            {
+                "id": 3,
+                "amount": 340.194,
+                "measurement_unit": "grams",
+                "quantity_per_unit": 1.0,
+                "food_item": {
+                    "id": 2
+                },
+                "category": {
+                    "id": 1
+                }
+            },
+            {
+                "id": 4,
+                "amount": 1.0,
+                "measurement_unit": "cup",
+                "quantity_per_unit": 200.0,
+                "food_item": {
+                    "id": 7
+                },
+                "category": {
+                    "id": 2
+                }
+            }
+        ],
+        "model": "recipe.NutritionalValue",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

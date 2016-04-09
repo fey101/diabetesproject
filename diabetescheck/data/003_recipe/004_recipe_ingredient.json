@@ -1,0 +1,208 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "recipe": {
+                    "id": 1
+                },
+                "ingredient": {
+                    "id": 1
+                }
+            },
+            {
+                "id": 2,
+                "recipe": {
+                    "id": 1
+                },
+                "ingredient": {
+                    "id": 2
+                }
+            },
+            {
+                "id": 3,
+                "recipe": {
+                    "id": 1
+                },
+                "ingredient": {
+                    "id": 3
+                }
+            },
+            {
+                "id": 4,
+                "recipe": {
+                    "id": 1
+                },
+                "ingredient": {
+                    "id": 4
+                }
+            },
+            {
+                "id": 5,
+                "recipe": {
+                    "id": 3
+                },
+                "ingredient": {
+                    "id": 5
+                }
+            },
+            {
+                "id": 6,
+                "recipe": {
+                    "id": 3
+                },
+                "ingredient": {
+                    "id": 6
+                }
+            },
+            {
+                "id": 7,
+                "recipe": {
+                    "id": 3
+                },
+                "ingredient": {
+                    "id": 7
+                }
+            },
+            {
+                "id": 8,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 8
+                }
+            },
+            {
+                "id": 9,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 9
+                }
+            },
+            {
+                "id": 10,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 10
+                }
+            },
+            {
+                "id": 11,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 11
+                }
+            },
+            {
+                "id": 12,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 12
+                }
+            },
+            {
+                "id": 13,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 13
+                }
+            },
+            {
+                "id": 14,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 14
+                }
+            },
+            {
+                "id": 15,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 15
+                }
+            },
+            {
+                "id": 16,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 16
+                }
+            },
+            {
+                "id": 17,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 17
+                }
+            },
+            {
+                "id": 18,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 18
+                }
+            },
+            {
+                "id": 19,
+                "recipe": {
+                    "id": 2
+                },
+                "ingredient": {
+                    "id": 19
+                }
+            },
+            {
+                "id": 20,
+                "recipe": {
+                    "id": 4
+                },
+                "ingredient": {
+                    "id": 20
+                }
+            },
+            {
+                "id": 21,
+                "recipe": {
+                    "id": 4
+                },
+                "ingredient": {
+                    "id": 21
+                }
+            },
+            {
+                "id": 22,
+                "recipe": {
+                    "id": 4
+                },
+                "ingredient": {
+                    "id": 22
+                }
+            }
+        ],
+        "model": "recipe.RecipeIngredient",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

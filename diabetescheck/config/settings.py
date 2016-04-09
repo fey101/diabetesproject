@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'diabetescheck_auth',
     'community',
     'journal',
-    'planner',
     'recipe',
     'data_bootstrap',
     'data',

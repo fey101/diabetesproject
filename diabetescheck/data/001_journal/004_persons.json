@@ -3,15 +3,22 @@
         "records": [
             {
                 "id": 1,
-                "first_name": "Fey101",
-                "last_name": "Kangai",
-                "other_names": "Gikundi",
+                "user": {
+                    "id": 1
+                },
                 "date_of_birth": "1992-11-17",
                 "gender": {
                     "id": 2
-                },
-                "marital_status": {
+                }
+            },
+            {
+                "id": 2,
+                "user": {
                     "id": 2
+                },
+                "date_of_birth": "1989-11-06",
+                "gender": {
+                    "id": 1
                 }
             }
         ],

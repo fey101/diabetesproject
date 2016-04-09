@@ -2,19 +2,17 @@ from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
 from django.db import models
-from journal.models import Person
 from oauth2_provider.models import AbstractApplication
 
 
 class UserManager(BaseUserManager):
-    """
-    A custom user manager for emr
-    """
+    """A custom user manager for emr."""
+
     def create_user(
             self, first_name=None, last_name=None, email=None, password=None,
             **extra_fields):
         """
-        Creates and saves a User with the given email, date of
+        Create and saves a User with the given email, date of
         birth and password.
         """
         if not email:
@@ -33,7 +31,7 @@ class UserManager(BaseUserManager):
     def create_superuser(self, first_name=None, last_name=None, email=None,
                          password=None, **extra_fields):
         """
-        Creates and saves a User with the given email, date of
+        Create and saves a User with the given email, date of
         birth and password.
         """
         user = self.create_user(
@@ -49,9 +47,7 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-    """
-    A custom user manager for madeasy user
-    """
+    """A custom user manager for dbcheck user."""
 
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
@@ -70,23 +66,12 @@ class User(AbstractBaseUser):
     REQUIRED_FIELDS = ['first_name', 'last_name']
 
 
-class UserProfile(models.Model):
-    """
-    This model joins a user to a person
-
-    """
-    user = models.OneToOneField(User, on_delete=models.PROTECT)
-    person = models.ForeignKey(Person, on_delete=models.PROTECT, null=True)
-
-    def __str__(self):
-        return '{} : {}'.format(self.user, self.person)
-
-
 class OauthApplication(AbstractApplication):
-    """
-    Oauth aplication table
+    """Oauth aplication table.
+
     Create an end point for registered OAUTH applications
     """
+
     def __str__(self):
         return self.name or self.client_id
 

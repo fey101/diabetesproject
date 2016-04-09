@@ -3,54 +3,50 @@ from rest_framework import serializers
 
 from .models import (
     Recipe,
-    FoodItem,
-    RecipeFoodItem,
-    FoodCategory,
-    NutritionalValue
+    Ingredients,
+    RecipeIngredient,
+    Nutrients,
+    RecipeNutrients,
 )
 
 
-class RecipeFoodItemSerializer(serializers.ModelSerializer):
-    """A serializer for RecipeFoodItem through table model."""
+class IngredientSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ingredients
 
-    recipe_name = serializers.ReadOnlyField(source="recipe.name")
-    fooditem_name = serializers.ReadOnlyField(source="food_item.name")
+
+class NutrientsSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = RecipeFoodItem
-
-
-class NutritionalValueSerializer(serializers.ModelSerializer):
-    fooditem_name = serializers.ReadOnlyField(source="food_item.name")
-    category_display = serializers.ReadOnlyField(source="category.category")
-    calories_in_units_consumed = serializers.ReadOnlyField()
-
-    class Meta:
-        model = NutritionalValue
-
-
-class FoodItemSerializer(serializers.ModelSerializer):
-    # calories = serializers.ReadOnlyField()
-    fooditem_nutrients = NutritionalValueSerializer(
-        many=True, read_only=True)
-
-    class Meta:
-        model = FoodItem
-        fields = ("id", "name", "description",
-                  "nutritional_value", "fooditem_nutrients")
+        model = Nutrients
 
 
 class RecipeSerializer(serializers.ModelSerializer):
-    person_name = serializers.StringRelatedField(source="person")
-    ingredients_list = FoodItemSerializer(many=True, read_only=True)
+    ingredients_list = IngredientSerializer(
+        many=True, read_only=True, source='ingredients')
+    nutrients_list = NutrientsSerializer(
+        many=True, read_only=True, source='nutrients')
 
     class Meta:
         model = Recipe
-        fields = ("id", "name", "description", "instructions", "prep_time",
-                  "serving", "person", "person_name", "ingredients",
-                  "ingredients_list")
+        fields = ("id", "name", "category", "description", "instructions",
+                  "prep_time", "serving", "ingredients", "ingredients_list",
+                  "nutrients", "nutrients_list")
 
 
-class FoodCategorySerializer(serializers.ModelSerializer):
+class RecipeIngredientSerializer(serializers.ModelSerializer):
+    """A serializer for RecipeIngredient through table model."""
+
+    recipe_name = serializers.ReadOnlyField(source="recipe.name")
+    ingredient_name = serializers.ReadOnlyField(source="ingredient.name")
+
     class Meta:
-        model = FoodCategory
+        model = RecipeIngredient
+
+
+class RecipeNutrientSerializer(serializers.ModelSerializer):
+    recipe_name = serializers.ReadOnlyField(source="recipe.name")
+    nutrient_name = serializers.ReadOnlyField(source="nutrient.name")
+
+    class Meta:
+        model = RecipeNutrients

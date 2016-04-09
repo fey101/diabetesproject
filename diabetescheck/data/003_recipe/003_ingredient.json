@@ -1,0 +1,137 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "name": "medium apples",
+                "amount": "3"
+            },
+            {
+                "id": 2,
+                "name": "ground cinnamon",
+                "amount": "3",
+                "unit_of_measure": "teaspoons"
+            },
+            {
+                "id": 3,
+                "name": "yogurt, fat-free plain",
+                "amount": "2",
+                "unit_of_measure": "cups"
+            },
+            {
+                "id": 4,
+                "name": "nuts, almonds and silvers",
+                "amount": "9",
+                "unit_of_measure": "tablespoons of"
+            },
+            {
+                "id": 5,
+                "name": "medium tomatoes, plum, washed and cut in half",
+                "amount": "4",
+            },
+            {
+                "id": 6,
+                "name": "margarine with plant sterols, or trans fat-free",
+                "amount": "2",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 7,
+                "name": "bread crumbs, fine and dry",
+                "amount": "2",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 8,
+                "name": "apple jelly",
+                "amount": "1/4",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 9,
+                "name": "snipped thyme or 0.2 teaspoon crushed and dried thyme",
+                "amount": "2",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 10,
+                "name": "fresh and grated ginger",
+                "amount": "1/2",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 11,
+                "name": "salt",
+                "amount": "1/8",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 12,
+                "name": "sliced onions",
+                "amount": "1/4",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 13,
+                "name": "spinach, prewashed",
+                "amount": "6",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 14,
+                "name": "soy sauce, less sodium",
+                "amount": "1",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 15,
+                "name": "lemon peel, finely shredded",
+                "amount": "1/2",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 16,
+                "name": "chicken breast",
+                "amount": "2",
+            },
+            {
+                "id": 17,
+                "name": "black pepper",
+                "amount": "1/8",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 18,
+                "name": "medium apple peeled, cored and chopped",
+                "amount": "1",
+            },
+            {
+                "id": 19,
+                "name": "garlic cloves, minced",
+                "amount": "1",
+            },
+            {
+                "id": 20,
+                "name": "low-fat, vanilla yoghurt",
+                "amount": "500",
+                "unit_of_measure": "ml"
+
+            },
+            {
+                "id": 21,
+                "name": "ripe banana",
+                "amount": "1",
+            },
+            {
+                "id": 22,
+                "name": "nuts, walnuts, chopped",
+                "amount": "1 1/2",
+                "unit_of_measure": "tablespoon"
+            }
+        ],
+        "model": "recipe.Ingredients",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

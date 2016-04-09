@@ -150,6 +150,7 @@ def process_json_files(filenames):
     assert isinstance(filenames, list)
 
     for filename in filenames:
+        print(filename)
         assert isinstance(filename, string_types)
         assert os.path.isfile(filename)
 

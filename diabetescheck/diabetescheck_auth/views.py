@@ -1,25 +1,18 @@
-from django.contrib.auth.views import login
+# from django.contrib.auth.views import login
 
 from rest_framework.generics import (
     ListCreateAPIView,
     RetrieveUpdateDestroyAPIView,
     RetrieveAPIView,
 )
-from rest_framework.decorators import (
-    api_view,
-    permission_classes
-)
-from rest_framework.permissions import AllowAny
 
 from .models import (
     User,
-    UserProfile,
     OauthApplication,
 )
 
 from .serializers import (
     UserSerializer,
-    UserProfileSerializer,
     OauthApplicationSerializer,
 )
 
@@ -37,17 +30,17 @@ class UserDetailView(RetrieveUpdateDestroyAPIView):
     lookup_field = 'pk'
 
 
-class UserProfileListView(ListCreateAPIView):
+# class UserProfileListView(ListCreateAPIView):
 
-    queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer
+#     queryset = UserProfile.objects.all()
+#     serializer_class = UserProfileSerializer
 
 
-class UserProfileDetailView(RetrieveUpdateDestroyAPIView):
+# class UserProfileDetailView(RetrieveUpdateDestroyAPIView):
 
-    queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer
-    lookup_field = 'pk'
+#     queryset = UserProfile.objects.all()
+#     serializer_class = UserProfileSerializer
+#     lookup_field = 'pk'
 
 
 class OauthApplicationListView(ListCreateAPIView):
@@ -72,4 +65,3 @@ class MeView(RetrieveAPIView):
     def get_object(self):
         """The queryset equivalent."""
         return self.request.user
-

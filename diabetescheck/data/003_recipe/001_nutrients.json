@@ -1,0 +1,202 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "name": "Calories",
+                "quantity": 150.0,
+                "unit": ""
+            },
+            {
+                "id": 2,
+                "name": "Saturated Fat",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 3,
+                "name": "Sodium",
+                "quantity": 60.0,
+                "unit": "mg"
+            },
+            {
+                "id": 4,
+                "name": "Fiber",
+                "quantity": 3.0,
+                "unit": "g"
+            },
+            {
+                "id": 5,
+                "name": "Protein",
+                "quantity": 6.0,
+                "unit": "g"
+            },
+            {
+                "id": 6,
+                "name": "Total Fat",
+                "quantity": 5.0,
+                "unit": "g"
+            },
+            {
+                "id": 7,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 8,
+                "name": "Total Carbs",
+                "quantity": 18.0,
+                "unit": "g"
+            },
+            {
+                "id": 9,
+                "name": "Calories",
+                "quantity": 60.0,
+                "unit": ""
+            },
+            {
+                "id": 10,
+                "name": "Saturated Fat",
+                "quantity": 0.5,
+                "unit": "g"
+            },
+            {
+                "id": 11,
+                "name": "Sodium",
+                "quantity": 80.0,
+                "unit": "mg"
+            },
+            {
+                "id": 12,
+                "name": "Fiber",
+                "quantity": 1.0,
+                "unit": "g"
+            },
+            {
+                "id": 13,
+                "name": "Protein",
+                "quantity": 1.0,
+                "unit": "g"
+            },
+            {
+                "id": 14,
+                "name": "Total Fat",
+                "quantity": 4.0,
+                "unit": "g"
+            },
+            {
+                "id": 15,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 16,
+                "name": "Total Carbs",
+                "quantity": 4.0,
+                "unit": "g"
+            },
+            {
+                "id": 17,
+                "name": "Calories",
+                "quantity": 300.0,
+                "unit": ""
+            },
+            {
+                "id": 18,
+                "name": "Saturated Fat",
+                "quantity": 1.0,
+                "unit": "g"
+            },
+            {
+                "id": 19,
+                "name": "Sodium",
+                "quantity": 579.0,
+                "unit": "mg"
+            },
+            {
+                "id": 20,
+                "name": "Fiber",
+                "quantity": 4.0,
+                "unit": "g"
+            },
+            {
+                "id": 21,
+                "name": "Protein",
+                "quantity": 30.0,
+                "unit": "g"
+            },
+            {
+                "id": 22,
+                "name": "Total Fat",
+                "quantity": 2.0,
+                "unit": "g"
+            },
+            {
+                "id": 23,
+                "name": "Cholesterol",
+                "quantity": 66.0,
+                "unit": "mg"
+            },
+            {
+                "id": 24,
+                "name": "Total Carbs",
+                "quantity": 42.0,
+                "unit": "g"
+            },
+            {
+                "id": 25,
+                "name": "Calories",
+                "quantity": 185.0,
+                "unit": ""
+            },
+            {
+                "id": 26,
+                "name": "Saturated Fat",
+                "quantity": 2.0,
+                "unit": "g"
+            },
+            {
+                "id": 27,
+                "name": "Sodium",
+                "quantity": 64.0,
+                "unit": "mg"
+            },
+            {
+                "id": 28,
+                "name": "Fiber",
+                "quantity": 2.0,
+                "unit": "g"
+            },
+            {
+                "id": 29,
+                "name": "Protein",
+                "quantity": 8.0,
+                "unit": "g"
+            },
+            {
+                "id": 30,
+                "name": "Total Fat",
+                "quantity": 8.0,
+                "unit": "g"
+            },
+            {
+                "id": 31,
+                "name": "Cholesterol",
+                "quantity": 5.0,
+                "unit": "mg"
+            },
+            {
+                "id": 32,
+                "name": "Total Carbs",
+                "quantity": 21.0,
+                "unit": "g"
+            }
+        ],
+        "model": "recipe.Nutrients",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

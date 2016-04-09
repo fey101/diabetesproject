@@ -6,29 +6,29 @@ from rest_framework.response import Response
 
 from .models import (
     Recipe,
-    FoodItem,
-    FoodCategory,
-    NutritionalValue,
-    RecipeFoodItem,
+    Ingredients,
+    RecipeIngredient,
+    Nutrients,
+    RecipeNutrients
 )
 
 from .serializers import (
-    FoodItemSerializer,
     RecipeSerializer,
-    FoodCategorySerializer,
-    NutritionalValueSerializer,
-    RecipeFoodItemSerializer,
+    IngredientSerializer,
+    RecipeIngredientSerializer,
+    NutrientsSerializer,
+    RecipeNutrientSerializer,
 )
 
 
-class RecipeFoodItemListView(ListCreateAPIView):
-    queryset = RecipeFoodItem.objects.all()
-    serializer_class = RecipeFoodItemSerializer
+class RecipeIngredientListView(ListCreateAPIView):
+    queryset = RecipeIngredient.objects.all()
+    serializer_class = RecipeIngredientSerializer
 
 
-class RecipeFoodItemDetailView(RetrieveUpdateDestroyAPIView):
-    queryset = RecipeFoodItem.objects.all()
-    serializer_class = RecipeFoodItemSerializer
+class RecipeIngredientDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = RecipeIngredient.objects.all()
+    serializer_class = RecipeIngredientSerializer
     lookup_field = 'pk'
 
 
@@ -45,23 +45,23 @@ class RecipeDetailView(RetrieveUpdateDestroyAPIView):
     lookup_field = 'pk'
 
 
-class FoodItemListView(ListCreateAPIView):
+class IngredientsListView(ListCreateAPIView):
 
-    queryset = FoodItem.objects.all()
-    serializer_class = FoodItemSerializer
+    queryset = Ingredients.objects.all()
+    serializer_class = IngredientSerializer
 
 
-class FoodItemDetailView(RetrieveUpdateDestroyAPIView):
+class IngredientDetailView(RetrieveUpdateDestroyAPIView):
 
-    queryset = FoodItem.objects.all()
-    serializer_class = FoodItemSerializer
+    queryset = Ingredients.objects.all()
+    serializer_class = IngredientSerializer
     lookup_field = 'pk'
 
 
-class FoodCategoryListView(ListCreateAPIView):
+class NutrientsListView(ListCreateAPIView):
 
-    queryset = FoodCategory.objects.all()
-    serializer_class = FoodCategorySerializer
+    queryset = Nutrients.objects.all()
+    serializer_class = NutrientsSerializer
 
     # def create(self, request):
     #     from pdb import set_trace
@@ -84,21 +84,21 @@ class FoodCategoryListView(ListCreateAPIView):
     #         return Response(serializer.errors, status=400)
 
 
-class FoodCategoryDetailView(RetrieveUpdateDestroyAPIView):
+class NutrientDetailView(RetrieveUpdateDestroyAPIView):
 
-    queryset = FoodCategory.objects.all()
-    serializer_class = FoodCategorySerializer
+    queryset = Nutrients.objects.all()
+    serializer_class = NutrientsSerializer
     lookup_field = 'pk'
 
 
-class NutritionalValueListView(ListCreateAPIView):
+class RecipeNutrientListView(ListCreateAPIView):
 
-    queryset = NutritionalValue.objects.all()
-    serializer_class = NutritionalValueSerializer
+    queryset = RecipeNutrients.objects.all()
+    serializer_class = RecipeNutrientSerializer
 
 
-class NutritionalValueDetailView(RetrieveUpdateDestroyAPIView):
+class RecipeNutrientDetailView(RetrieveUpdateDestroyAPIView):
 
-    queryset = NutritionalValue.objects.all()
-    serializer_class = NutritionalValueSerializer
+    queryset = RecipeNutrients.objects.all()
+    serializer_class = RecipeNutrientSerializer
     lookup_field = 'pk'

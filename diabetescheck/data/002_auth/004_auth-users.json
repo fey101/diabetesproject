@@ -17,9 +17,12 @@
                 "id": 2,
                 "email": "admin2@diabetescheck.com",
                 "password": "pbkdf2_sha256$20000$NdnK84zZYjkt$f5btz29FtR/TGhQrbQKyDLs0VBSQYiKeXBHiBz2WCMU=",
-                "is_admin": true,
+                "first_name": "Mark",
+                "last_name": "Maina",
+                "is_admin": false,
                 "is_staff": true,
-                "is_initial": false
+                "is_initial": false,
+                "is_active": true
             }
         ],
         "model": "diabetescheck_auth.User",

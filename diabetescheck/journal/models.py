@@ -6,7 +6,10 @@ from django.utils import timezone
 from rest_framework.serializers import ValidationError
 
 from diabetescheck_auth.models import User
-from community.models import ExerciseRoutines
+from community.models import (
+    ExerciseRoutines,
+    SugarLevelDetails,
+)
 from recipe.models import Recipe
 
 
@@ -32,11 +35,17 @@ class Person(models.Model):
     of a specific health-related context
     """
 
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, related_name="person")
     gender = models.ForeignKey(Gender, on_delete=models.PROTECT)
     date_of_birth = models.DateField(verbose_name="Date of birth (YYYY-MM-DD)")
     health_details = models.OneToOneField(
         'HealthDetails', null=True, blank=True)
+    sugar_logs = models.ManyToManyField(
+        SugarLevelDetails, through="DetailedSugarLog")
+    exercise_logs = models.ManyToManyField(
+        ExerciseRoutines, through="DetailedExerciseLog")
+    food_logs = models.ManyToManyField(
+        Recipe, through="DetailedFoodLog")
 
     def get_full_name(self):
         """Return the identifying fullname for this User."""
@@ -76,8 +85,8 @@ class Person(models.Model):
 
 
 class HealthDetails(models.Model):
-    weight = models.DecimalField(max_digits=10, decimal_places=4)
-    height = models.DecimalField(max_digits=10, decimal_places=4)
+    weight = models.DecimalField(max_digits=10, decimal_places=1)
+    height = models.DecimalField(max_digits=10, decimal_places=1)
     diabetic = models.BooleanField()
 
     errors = []
@@ -95,11 +104,11 @@ class HealthDetails(models.Model):
                 self.errors.append(error_msg)
 
     def validate_max_height(self):
-        error_msg = "The height should not be greater than 300 centimeters"
+        error_msg = "The height should not be greater than 3 meters"
         try:
             self.errors.remove(error_msg)
         except ValueError:
-            if self.height > 300:
+            if self.height > 3:
                 self.errors.append(error_msg)
 
     def validate_low_weight(self):
@@ -125,11 +134,6 @@ class HealthDetails(models.Model):
                 raise ValidationError(errors)
 
     def clean(self):
-        self.validate_low_pulse()
-        self.validate_high_pulse()
-        self.validate_diastolic_bp()
-        self.validate_systolic_bp()
-        self.validate_systolic_diastolic()
         self.validate_small_height()
         self.validate_max_height()
         self.validate_low_weight()
@@ -142,29 +146,34 @@ class HealthDetails(models.Model):
         super(HealthDetails, self).save(*args, **kwargs)
 
 
-class ExerciseLog(models.Model):
-    person = models.ForeignKey(Person)
+class DetailedExerciseLog(models.Model):
+    person = models.ForeignKey(
+        Person, related_name="sugar_log_details")
     date = models.DateField(auto_now=True)
-    duration = models.DurationField()
-    exercise_type = models.ForeignKey(ExerciseRoutines)
+    time = models.TimeField(auto_now=True)
+    exercise_type = models.ForeignKey(
+        ExerciseRoutines, related_name="exercise_details_persons")
     calories_lost = models.CharField(
         max_length=255, blank=True, null=True)
 
 
-class FoodLog(models.Model):
-    person = models.ForeignKey(Person)
+class DetailedFoodLog(models.Model):
+    person = models.ForeignKey(
+        Person, related_name="food_log_details")
     date = models.DateField(auto_now=True)
-    time = models.CharField(max_length=255)
-    food = models.ForeignKey(Recipe)
+    time = models.TimeField(auto_now=True)
+    food = models.ForeignKey(
+        Recipe, related_name="recipe_persons")
     calories_gained = models.DecimalField(max_digits=20, decimal_places=3)
     recommendation = models.CharField(
         max_length=255, blank=True, null=True)
 
 
-class SugarLevelsLog(models.Model):
-    person = models.ForeignKey(Person)
+class DetailedSugarLog(models.Model):
+    """A through table for Person - SugarLevelDetails relationship."""
+    person = models.ForeignKey(
+        Person, related_name="sugar_log_details")
     date = models.DateField(auto_now=True)
-    time = models.CharField(max_length=255)
-    sugar_level = models.DecimalField(max_digits=20, decimal_places=3)
-    recommendation = models.CharField(
-        max_length=255, blank=True, null=True)
+    time = models.TimeField(auto_now=True)
+    details = models.ForeignKey(
+        SugarLevelDetails, related_name="sugarDetails_log")

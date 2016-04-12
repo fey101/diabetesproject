@@ -1,0 +1,59 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "period": "fasting glucose",
+                "sugarLevel": "0-49",
+                "status": "Hypoglycemia",
+                "explanation": "Your sugar levels are too low below normal",
+                "remedial_action": "Ask a relative to take you to a hospital immediately. While at it, take scoops of glucose or sweets to prevent the readings from dropping any further",
+                "recommendation": "Seek medical advice soonest possible"
+            },
+            {
+                "id": 2,
+                "period": "fasting glucose",
+                "sugarLevel": "50-69",
+                "status": "Hypoglycemia",
+                "explanation": "Your sugar level is below normal",
+                "remedial_action": "Find food to eat and take blood sugar level readings more often.",
+                "recommendation": "Sugar levels should not drop below 50mg/dl. An occurence of this is medically fatal."
+            },
+            {
+                "id": 3,
+                "period": "fasting glucose",
+                "sugarLevel": "70-110",
+                "status": "Normal blood sugar level",
+                "explanation": "Sugar level range is between 70 and 110 mg/dl",
+                "remedial_action": "None",
+                "recommendation": "Maintain a healthy lifestyle by eating healthy and doing exercises"
+            },
+            {
+                "id": 4,
+                "period": "fasting glucose",
+                "sugarLevel": "110-300",
+                "diabetic": true,
+                "status": "Hyperglycemia",
+                "explanation": "Your sugar level is above normal",
+                "remedial_action": "Exercise to reduce the blood sugar levels. Persistent high sugar levels lead to diabetic related complications",
+                "recommendation": "Reduce your carbs/calories intake or increase your activity levels"
+            },
+            {
+                "id": 5,
+                "period": "fasting glucose",
+                "sugarLevel": "110-300",
+                "diabetic": false,
+                "status": "Hyperglycemia",
+                "explanation": "Your sugar level is above normal",
+                "remedial_action": "Try reducing your carbs/calories intake or increase your activity levels",
+                "recommendation": "if high readings persit/have persisted, it is recommended that you have your HbA1c levels tested at a health facility to determine if you are diabetic."
+            }
+        ],
+        "model": "recipe.Recipe",
+        "unique_fields": [
+            "id"
+        ]
+
+    }
+]
+

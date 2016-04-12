@@ -1,0 +1,16 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "weight": "56.0",
+                "height": "1.6",
+                "diabetic": false
+            }
+        ],
+        "model": "journal.HealthDetails",
+        "unique_fields": [
+            "id"
+        ]
+    }
+]

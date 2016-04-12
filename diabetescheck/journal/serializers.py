@@ -12,7 +12,6 @@ from .models import (
 
 class PersonSerializer(serializers.ModelSerializer):
     person_display = serializers.ReadOnlyField(source='__str__')
-    email = serializers.ReadOnlyField(source='user.email')
     gender_name = serializers.ReadOnlyField(source='gender.display')
 
     class Meta:

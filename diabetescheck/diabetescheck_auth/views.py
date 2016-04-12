@@ -30,19 +30,6 @@ class UserDetailView(RetrieveUpdateDestroyAPIView):
     lookup_field = 'pk'
 
 
-# class UserProfileListView(ListCreateAPIView):
-
-#     queryset = UserProfile.objects.all()
-#     serializer_class = UserProfileSerializer
-
-
-# class UserProfileDetailView(RetrieveUpdateDestroyAPIView):
-
-#     queryset = UserProfile.objects.all()
-#     serializer_class = UserProfileSerializer
-#     lookup_field = 'pk'
-
-
 class OauthApplicationListView(ListCreateAPIView):
 
     queryset = OauthApplication.objects.all()

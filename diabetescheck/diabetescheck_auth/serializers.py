@@ -5,16 +5,18 @@ from .models import (
     User,
     OauthApplication,
 )
+from journal.serializers import (
+    HealthDetailsSerializer,
+    PersonSerializer,
+)
 
 
 class UserSerializer(serializers.ModelSerializer):
+    person = PersonSerializer()
+    person_health = HealthDetailsSerializer(source="person.health_details")
+
     class Meta:
         model = User
-
-
-# class UserProfileSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = UserProfile
 
 
 class OauthApplicationSerializer(serializers.ModelSerializer):

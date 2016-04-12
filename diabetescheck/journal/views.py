@@ -13,9 +13,9 @@ from .models import (
     Gender,
     HealthDetails,
     Person,
-    ExerciseLog,
-    FoodLog,
-    SugarLevelsLog,
+    DetailedExerciseLog,
+    DetailedFoodLog,
+    DetailedSugarLog,
 )
 
 
@@ -52,30 +52,30 @@ class HealthDetailsDetailView(RetrieveUpdateAPIView):
 
 
 class FoodLogListView(ListCreateAPIView):
-    queryset = FoodLog.objects.all()
+    queryset = DetailedFoodLog.objects.all()
     serializer_class = FoodLogSerializer
 
 
 class FoodLogDetailView(RetrieveUpdateAPIView):
-    queryset = FoodLog.objects.all()
+    queryset = DetailedFoodLog.objects.all()
     serializer_class = FoodLogSerializer
 
 
 class ExerciseLogListView(ListCreateAPIView):
-    queryset = ExerciseLog.objects.all()
+    queryset = DetailedExerciseLog.objects.all()
     serializer_class = ExerciseLogSerializer
 
 
 class ExerciseLogDetailView(RetrieveUpdateAPIView):
-    queryset = ExerciseLog.objects.all()
+    queryset = DetailedExerciseLog.objects.all()
     serializer_class = ExerciseLogSerializer
 
 
 class SugarLevelsLogListView(ListCreateAPIView):
-    queryset = SugarLevelsLog.objects.all()
+    queryset = DetailedSugarLog.objects.all()
     serializer_class = SugarLevelsLogSerializer
 
 
 class SugarLevelsLogDetailView(RetrieveUpdateAPIView):
-    queryset = SugarLevelsLog.objects.all()
+    queryset = DetailedSugarLog.objects.all()
     serializer_class = SugarLevelsLogSerializer

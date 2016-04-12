@@ -6,14 +6,12 @@ from .models import (
     OauthApplication,
 )
 from journal.serializers import (
-    HealthDetailsSerializer,
     PersonSerializer,
 )
 
 
 class UserSerializer(serializers.ModelSerializer):
-    person = PersonSerializer()
-    person_health = HealthDetailsSerializer(source="person.health_details")
+    person = PersonSerializer(read_only=True)
 
     class Meta:
         model = User

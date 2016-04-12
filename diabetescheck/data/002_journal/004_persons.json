@@ -9,9 +9,6 @@
                 "date_of_birth": "1992-11-17",
                 "gender": {
                     "id": 2
-                },
-                "health_details":{
-                    "id": 1
                 }
             },
             {

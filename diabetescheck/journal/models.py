@@ -148,7 +148,7 @@ class HealthDetails(models.Model):
 
 class DetailedExerciseLog(models.Model):
     person = models.ForeignKey(
-        Person, related_name="sugar_log_details")
+        Person, related_name="exercise_log_details")
     date = models.DateField(auto_now=True)
     time = models.TimeField(auto_now=True)
     exercise_type = models.ForeignKey(

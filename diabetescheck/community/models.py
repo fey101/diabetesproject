@@ -34,11 +34,11 @@ class ExerciseRoutines(models.Model):
 class SugarLevelDetails(models.Model):
     """Holds fixed relations on sugar levels and related implications."""
 
-    period = models.CharField(max_length=15, options=PERIOD_SET)
+    period = models.CharField(max_length=15, choices=PERIOD_SET)
     sugarLevel = models.CharField(max_length=10)
     # the diabetic status of patient will determine recommendation given.
     diabetic = models.BooleanField(default=False)
-    status = models.CharField(max_length=255, options=STATUS_SET)
+    status = models.CharField(max_length=255, choices=STATUS_SET)
     explanation = models.CharField(max_length=255)
     remedial_action = models.CharField(max_length=255)
     recommendation = models.CharField(max_length=255)

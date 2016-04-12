@@ -5,29 +5,17 @@ from .views import (
     FAQsDetailView,
     ExerciseRoutinesListView,
     ExerciseRoutinesDetailView,
+    SugarLevelsDetailsListView,
+    SugarLevelsDetailsDetailView,
 )
 
 
 urlpatterns = [
-    # url(r'^user_messages/',
-    #     UserMessageListView.as_view(), name='user_messages_list'),
-    # url(r'^user_message/(?P<pk>[0-9]+)$',
-    #     UserMessageDetailView.as_view(), name='user_message_detail'),
 
     url(r'^FAQs/',
         FAQsListView.as_view(), name='FAQs_list'),
     url(r'^FAQ/(?P<pk>[0-9]+)$',
         FAQsDetailView.as_view(), name='FAQ_detail'),
-
-    # url(r'^user_groups/',
-    #     UsersGroupListView.as_view(), name='user_groups_list'),
-    # url(r'^user_group/(?P<pk>[0-9]+)$',
-    #     UsersGroupDetailView.as_view(), name='user_group_detail'),
-
-    # url(r'^group_messages/',
-    #     GroupMessageListView.as_view(), name='group_message_list'),
-    # url(r'^group_message/(?P<pk>[0-9]+)$',
-    #     GroupMessageDetailView.as_view(), name='group_message_detail'),
 
     # url(r'^users_questions/',
     #     UsersQuestionListView.as_view(), name='user_questions_list'),
@@ -38,4 +26,9 @@ urlpatterns = [
         ExerciseRoutinesListView.as_view(), name='exercises_list'),
     url(r'^exercise/(?P<pk>[0-9]+)$',
         ExerciseRoutinesDetailView.as_view(), name='exercise_detail'),
+
+    url(r'^sugarlevel_details/',
+        SugarLevelsDetailsListView.as_view(), name='sugarlevels_details_list'),
+    url(r'^sugarlevel_detail/(?P<pk>[0-9]+)$',
+        SugarLevelsDetailsDetailView.as_view(), name='sugarlevel_detail'),
 ]

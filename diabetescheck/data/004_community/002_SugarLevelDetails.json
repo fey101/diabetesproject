@@ -49,7 +49,7 @@
                 "recommendation": "if high readings persit/have persisted, it is recommended that you have your HbA1c levels tested at a health facility to determine if you are diabetic."
             }
         ],
-        "model": "recipe.Recipe",
+        "model": "community.SugarLevelDetails",
         "unique_fields": [
             "id"
         ]

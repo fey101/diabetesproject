@@ -3,7 +3,8 @@ from django.db import models
 PERIOD_SET = (
     ("before meal", "Before meal"),
     ("after meal", "After meal"),
-    ("fasting glucose", "Fasting glucose")
+    ("fasting glucose", "Fasting glucose"),
+    ("any", "Any")
 )
 STATUS_SET = (
     ("Hypoglycemia", "Hypo"),

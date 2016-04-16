@@ -119,6 +119,10 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.FileUploadParser',
         'rest_framework.parsers.FormParser',
     ),
+    'DEFAULT_FILTER_BACKENDS': (
+        'rest_framework.filters.DjangoFilterBackend',
+        'rest_framework.filters.OrderingFilter',
+    ),
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.BrowsableAPIRenderer',
         'rest_framework.renderers.JSONRenderer',

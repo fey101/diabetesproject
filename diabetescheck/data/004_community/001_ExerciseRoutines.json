@@ -1,0 +1,102 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "name": "Badminton",
+                "rate": 0.044
+            },
+            {
+                "id": 2,
+                "name": "Basketball",
+                "rate": 0.063
+            },
+            {
+                "id": 3,
+                "name": "Bicycling (5.5 mph)",
+                "rate": 0.029
+            },
+            {
+                "id": 4,
+                "name": "Bicycling (9.5 mph)",
+                "rate": 0.045
+            },
+            {
+                "id": 5,
+                "name": "Dance, Aerobic, medium",
+                "rate": 0.046
+            },
+            {
+                "id": 6,
+                "name": "Dance, Aerobic, intense",
+                "rate": 0.061
+            },
+            {
+                "id": 7,
+                "name": "Grocery shopping",
+                "rate": 0.028
+            },
+            {
+                "id": 8,
+                "name": "Jumping Rope (70 jumps per minute)",
+                "rate": 0.074
+            },
+            {
+                "id": 9,
+                "name": "Jumping Rope (125 jumps per minute)",
+                "rate": 0.080
+            },
+            {
+                "id": 10,
+                "name": "Jumping Rope (145 jumps per minute)",
+                "rate": 0.089
+            },
+            {
+                "id": 11,
+                "name": "Dance, Aerobic, intense",
+                "rate": 0.061
+            },
+            {
+                "id": 12,
+                "name": "Grocery shopping",
+                "rate": 0.028
+            },
+            {
+                "id": 13,
+                "name": "Squats",
+                "rate": 0.096
+            },
+            {
+                "id": 14,
+                "name": "Walking, normal pace, asphalt road",
+                "rate": 0.036
+            },
+            {
+                "id": 15,
+                "name": "Walking, normal pace, fields & hills",
+                "rate": 0.037
+            },
+            {
+                "id": 16,
+                "name": "Weeding",
+                "rate": 0.033
+            },
+            {
+                "id": 17,
+                "name": "Weight training, free weights",
+                "rate": 0.039
+            },
+            {
+                "id": 18,
+                "name": "Weight training, circuit training",
+                "rate": 0.042
+            }
+        ],
+        "model": "community.ExerciseRoutines",
+        "unique_fields": [
+            "id"
+        ]
+
+    }
+]
+

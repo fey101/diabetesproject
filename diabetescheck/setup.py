@@ -25,6 +25,7 @@ setup(
         'psycopg2==2.6.1',
         'djangorestframework==3.3.2',
         'django-cors-headers==1.1.0',
+        'django-filter==0.11.0',
         'gunicorn==19.4.5',
         'oauthlib==1.0.3',
         'click==6.2',

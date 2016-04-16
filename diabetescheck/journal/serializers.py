@@ -10,6 +10,27 @@ from .models import (
 )
 
 
+class PersonFieldMixin(serializers.ModelSerializer):
+    """.
+
+    Automates provision of fields such as person
+    which always depends on logged in user.
+    """
+
+    person = serializers.CharField(read_only=True)
+
+    def create(self, validated_data):
+        """.
+
+        Injects the fields in the abstract base model as a model
+        instance is being saved.
+        """
+        user = self.context['request'].user
+        validated_data['person'] = user.person
+
+        return self.Meta.model.objects.create(**validated_data)
+
+
 class HealthDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = HealthDetails
@@ -30,16 +51,20 @@ class GenderSerializer(serializers.ModelSerializer):
         model = Gender
 
 
-class ExerciseLogSerializer(serializers.ModelSerializer):
+class ExerciseLogSerializer(PersonFieldMixin):
+    exercise_type_name = serializers.ReadOnlyField(
+        source="exercise_type.__str__")
+    total_calories_burnt = serializers.ReadOnlyField()
+
     class Meta:
         model = DetailedExerciseLog
 
 
-class FoodLogSerializer(serializers.ModelSerializer):
+class FoodLogSerializer(PersonFieldMixin):
     class Meta:
         model = DetailedFoodLog
 
 
-class SugarLevelsLogSerializer(serializers.ModelSerializer):
+class SugarLevelsLogSerializer(PersonFieldMixin):
     class Meta:
         model = DetailedSugarLog

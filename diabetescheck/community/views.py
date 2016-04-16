@@ -15,6 +15,12 @@ from .serializers import (
     SugarLevelDetailsSerializer,
 )
 
+from .filters import (
+    FAQsFilter,
+    ExerciseRoutinesFilter,
+    SugarLevelDetailsFilter,
+)
+
 
 # class UserMessageListView(ListCreateAPIView):
 
@@ -33,6 +39,7 @@ class FAQsListView(ListCreateAPIView):
 
     queryset = FAQs.objects.all()
     serializer_class = FAQsSerializer
+    filter_class = FAQsFilter
 
 
 class FAQsDetailView(RetrieveUpdateDestroyAPIView):
@@ -46,6 +53,7 @@ class ExerciseRoutinesListView(ListCreateAPIView):
 
     queryset = ExerciseRoutines.objects.all()
     serializer_class = ExerciseRoutinesSerializer
+    filter_class = ExerciseRoutinesFilter
 
 
 class ExerciseRoutinesDetailView(RetrieveUpdateDestroyAPIView):
@@ -59,6 +67,7 @@ class SugarLevelsDetailsListView(ListCreateAPIView):
 
     queryset = SugarLevelDetails.objects.all()
     serializer_class = SugarLevelDetailsSerializer
+    filter_class = SugarLevelDetailsFilter
 
 
 class SugarLevelsDetailsDetailView(RetrieveUpdateDestroyAPIView):

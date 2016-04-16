@@ -27,63 +27,6 @@ class Gender(Valueset):
     pass
 
 
-class Person(models.Model):
-    """
-    A generic person record.
-
-    Demographics and administrative information about a person independent
-    of a specific health-related context
-    """
-
-    user = models.OneToOneField(User, related_name="person")
-    gender = models.ForeignKey(Gender, on_delete=models.PROTECT)
-    date_of_birth = models.DateField(verbose_name="Date of birth (YYYY-MM-DD)")
-    health_details = models.OneToOneField(
-        'HealthDetails', null=True, blank=True)
-    sugar_logs = models.ManyToManyField(
-        SugarLevelDetails, through="DetailedSugarLog")
-    exercise_logs = models.ManyToManyField(
-        ExerciseRoutines, through="DetailedExerciseLog")
-    food_logs = models.ManyToManyField(
-        Recipe, through="DetailedFoodLog")
-
-    def get_full_name(self):
-        """Return the identifying fullname for this User."""
-        return " ".join([self.user.first_name, self.user.last_name])
-
-    def validate_dob(self):
-        """
-        Check date of birth is within expected limits.
-
-        ... that is date of birth is less than today
-        and less than 150 years
-        """
-        if self.date_of_birth:
-            max_age = 365 * 300
-            delta = datetime.timedelta(days=max_age)
-            if self.date_of_birth > timezone.now().date():
-                raise ValidationError(
-                    {'date_of_birth': ('Date of birth cannot' +
-                                       ' be a future date')})
-
-            oldest_person = timezone.now().date() - delta
-            if self.date_of_birth < oldest_person:
-                raise ValidationError(
-                    {'date_of_birth': ('A person cannot be more than ' +
-                                       '300 years old.')})
-
-    def clean(self):
-        self.validate_dob()
-        super(Person, self).clean()
-
-    def save(self, *args, **kwargs):
-        self.full_clean(exclude=None)
-        super(Person, self).save(*args, **kwargs)
-
-    def __str__(self):
-        return self.get_full_name()
-
-
 class HealthDetails(models.Model):
     weight = models.DecimalField(max_digits=10, decimal_places=1)
     height = models.DecimalField(max_digits=10, decimal_places=1)
@@ -146,6 +89,63 @@ class HealthDetails(models.Model):
         super(HealthDetails, self).save(*args, **kwargs)
 
 
+class Person(models.Model):
+    """
+    A generic person record.
+
+    Demographics and administrative information about a person independent
+    of a specific health-related context
+    """
+
+    user = models.OneToOneField(User, related_name="person")
+    gender = models.ForeignKey(Gender, on_delete=models.PROTECT)
+    date_of_birth = models.DateField(verbose_name="Date of birth (YYYY-MM-DD)")
+    health_details = models.OneToOneField(
+        HealthDetails, null=True, blank=True)
+    sugar_logs = models.ManyToManyField(
+        SugarLevelDetails, through="DetailedSugarLog")
+    exercise_logs = models.ManyToManyField(
+        ExerciseRoutines, through="DetailedExerciseLog")
+    food_logs = models.ManyToManyField(
+        Recipe, through="DetailedFoodLog")
+
+    def get_full_name(self):
+        """Return the identifying fullname for this User."""
+        return " ".join([self.user.first_name, self.user.last_name])
+
+    def validate_dob(self):
+        """
+        Check date of birth is within expected limits.
+
+        ... that is date of birth is less than today
+        and less than 150 years
+        """
+        if self.date_of_birth:
+            max_age = 365 * 300
+            delta = datetime.timedelta(days=max_age)
+            if self.date_of_birth > timezone.now().date():
+                raise ValidationError(
+                    {'date_of_birth': ('Date of birth cannot' +
+                                       ' be a future date')})
+
+            oldest_person = timezone.now().date() - delta
+            if self.date_of_birth < oldest_person:
+                raise ValidationError(
+                    {'date_of_birth': ('A person cannot be more than ' +
+                                       '300 years old.')})
+
+    def clean(self):
+        self.validate_dob()
+        super(Person, self).clean()
+
+    def save(self, *args, **kwargs):
+        self.full_clean(exclude=None)
+        super(Person, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.get_full_name()
+
+
 class DetailedExerciseLog(models.Model):
     person = models.ForeignKey(
         Person, related_name="exercise_log_details")
@@ -153,8 +153,15 @@ class DetailedExerciseLog(models.Model):
     time = models.TimeField(auto_now=True)
     exercise_type = models.ForeignKey(
         ExerciseRoutines, related_name="exercise_details_persons")
-    calories_lost = models.CharField(
-        max_length=255, blank=True, null=True)
+    duration = models.DurationField()
+
+    @property
+    def total_calories_burnt(self):
+        """Calculate calories burnt in activity."""
+        weight = self.person.health_details.weight
+        minutes = int(self.duration.seconds / 60)
+        burnt_calories = self.exercise_type.rate * weight * minutes
+        return burnt_calories
 
 
 class DetailedFoodLog(models.Model):
@@ -175,5 +182,7 @@ class DetailedSugarLog(models.Model):
         Person, related_name="sugar_log_details")
     date = models.DateField(auto_now=True)
     time = models.TimeField(auto_now=True)
+    sugarLevel = models.IntegerField()
+    period = models.CharField(max_length=255)
     details = models.ForeignKey(
         SugarLevelDetails, related_name="sugarDetails_log")

@@ -28,8 +28,12 @@ class ExerciseRoutines(models.Model):
     """Known documented facts about different exercises."""
 
     name = models.CharField(max_length=255)
-    duration = models.DurationField()
-    calories_burnt = models.DecimalField(decimal_places=2, max_digits=5)
+    # rate = Calories burned per pound per minute
+    rate = models.DecimalField(decimal_places=3, max_digits=5)
+
+    def __str__(self):
+        """Class string representation."""
+        return self.name
 
 
 class SugarLevelDetails(models.Model):

@@ -1,0 +1,103 @@
+[
+    {
+        "records": [
+            {
+                "id": 1,
+                "question": "What is diabetes?",
+                "brief_response": "Diabetes is a metabolic disease in which the body’s inability to produce any or enough insulin causes elevated levels of glucose in the blood. There are 5 types of diabetes including the type 2 diabetes which is the focus of this application. Type 2 diabetes mostly occurs after the age of 40 bit due to a changed lifestyle in industrial nations (overweight and lack of exercise) the manifestation of type 2 diabetes is now being seen at much younger persons (adolescents).",
+                "detailed_response_url": "http://www.wellion.at/en/diabetes/Types_of_diabetes/",
+            },
+            {
+                "id": 2,
+                "question": "What are the symptoms of diabetes?",
+                "brief_response": "Common warnings signs of diabetes include: Increased thirst, Increased hunger (especially after eating), Dry mouth, Frequent urination or urine infections, Unexplained weight loss (even though you are eating and feel hungry), Fatigue (weak, tired feeling), Blurred vision, Headaches.",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 3,
+                "question": "Am I diabetic?",
+                "brief_response": "The diagnosis of diabetes typically comes as a shock because the disease usually develops slowly over the course of years. While it is possible to develop this illness and not experience any of the symptoms associated with it, many people look back and realize they've been experiencing the early warning signs for years. Knowing the symptoms of diabetes may not stop you from getting it, but could help you identify and treat the disease earlier. To determine if you are diabetic or not, a simple quiz on your risk of being diabetic may be the first step. If your risk is high, you may want to take blood glucose test to further clarify this. You may also want to talk to your doctor about your risk for diabetes and determine if you should be tested.",
+                "detailed_response_url": "http://www.phlaunt.com/diabetes/14046889.php",
+            },
+            {
+                "id": 4,
+                "question": "Prevention of type 2 diabetes",
+                "brief_response": "Some simple steps to preventing type 2 diabetes include: Control Your Weight \nGet Moving—and Turn Off the Television (keep physically active) \nMind your diet. \nIf You Smoke, Try to Quit. ",
+                "detailed_response_url": "http://www.hsph.harvard.edu/nutritionsource/diabetes-prevention/preventing-diabetes-full-story/",
+            },
+            {
+                "id": 5,
+                "question": "Why is diabetes a great health concern?",
+                "brief_response": "Once seen as a disease of affluent societies, diabetes has become a growing problem moreso because its medication is expensive and often drains the incomes of the affected. Diabetes if not well managed, lowers life expectancy by up to 15 years, increases the risk of heart disease by 2 to 4 times, and is the leading cause of kidney failure, lower limb amputations, and adult-onset blindness. Diabetes is also on an increase. In the year 2014, Kenya for example, recorded 775,200 cases of diabetes as reported in the IDF diabetes atlas.",
+                "detailed_response_url": "http://www.idf.org/wdd-index/",
+            },
+            {
+                "id": 6,
+                "question": "Managing Type 2 Diabetes",
+                "detailed_response_url": "",
+                "brief_response": "Managing Type 2 diabetes isn’t a simple task to take on —you need to plan healthy meals, find time to exercise, test your blood sugar, visit your doctor regularly, and more. Feeling overwhelmed by the constant care diabetes requires can lead to the occasional slip — some days you may feel like eating whatever you want or skipping your exercise routine, for instance. Even people who have been successfully managing their condition for years get derailed from time to time. And that can be downright discouraging. In fact, discouragement is a big reason people get off track with diabetes",
+
+            },
+            {
+                "id": 7,
+                "question": "How to Stabilize Your Blood Sugar Levels",
+                "brief_response": "In managing diabetes and related complications, it is crucial to stabilize blood sugar levels. To do this Consistency is key. “Eating at the same time each day, taking your medication at the same time, and exercising at the same time can help you to create consistent patterns to your blood glucose levels.” And that’s not just helpful in the short term — it’s helpful for the future, too. Because one thing’s for sure: Staying on top of your blood glucose levels is crucial for your health.",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 8,
+                "question": "How does blood testing help?",
+                "brief_response": "Regular blood glucose (sugar) testing at home also plays an important role. Keeping track of your blood sugar lets you know how well your diabetes management plan is working and can help you and doctor determine if any changes need to be made.",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 9,
+                "question": "How to decide on when to test your blood sugar",
+                "brief_response": "It is recommended to use blood sugar testing to find out what affects your blood sugar throughout the day. “Do experiments, Change some things up on your own and see what works and what doesn’t.” For example, one day you might test before a meal and two to three hours afterward. Then, based on how that meal affected your blood sugar, you might change some part of that meal — such as eating more vegetables and less pasta or rice — and retest the next day. You can use the same strategy to learn how different snacks before bed affect your morning blood sugar levels or how a walk after dinner affects evening blood sugar levels. Keep a log of results with notes about activity, diet, and other factors that could affect your blood sugar.",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 10,
+                "question": "When to Call Your Doctor About Your Blood Sugar",
+                "brief_response": "Record your blood sugar results in a log or a download from your meter and share them with your doctor at your next appointment. You should also call him or her if you aren’t sure why you’re getting certain blood sugar results or you don’t know how to respond to them. Also if You’ve been testing your blood sugar to find out how diet or exercise affects you and the results worry you.",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 11,
+                "question": "Choosing healthy snacks",
+                "brief_response": "“Packing your own snacks when you travel is always your best bet,” says Toby Smithson, RDN, CDE, author of Diabetes Meal Planning and Nutrition for Dummies. “But the next best option is to choose snacks that are lower in fat — 5 grams or less per serving — and fit your daily carbohydrate plan.",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 12,
+                "question": "Who should check for blood glucose?",
+                "brief_response": "Talk to your doctor about whether you should be checking your blood glucose. People that may benefit from checking blood glucose include those taking insulin, that are pregnant, having a hard time controlling blood glucose levels, having low blood glucose levels without the usual warning signs, and those that have ketones from high blood glucose levels.",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 13,
+                "question": "How do I check?",
+                "brief_response": "After washing your hands, insert a test strip inside your meter. Use your lancing device on the side of your fingertip to get a drop of blood. Touch and hold the edge of the test strip to the drop of blood, and wait for the result. Your blood glucose levels will appear on the meter's display",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 14,
+                "question": "What are the symptoms of hypoglycemia?",
+                "detailed_response_url": "http://www.diabetes.org/living-with-diabetes/treatment-and-care/blood-glucose-control/hypoglycemia-low-blood.html",
+                "brief_response": "Signs and symptoms of hypoglycemia happen quickly and include Shakiness, Nervousness or anxiety, Sweating, chills and clamminess, Irritability or impatience, Confusion, including delirium, Rapid/fast heartbeat, Lightheadedness or dizziness, Hunger and nausea, Sleepiness, e.t.c. Also watch out for staggering gait, slurred speech, and disorientation, which could be mistaken for tipsiness",
+            },
+            {
+                "id": 15,
+                "question": "What are the symptoms of hyperglycemia?",
+                "brief_response": "Symptoms of hypoglycemia include High blood glucose, High levels of sugar in the urine, Frequent urination, and Increased thirst",
+                "detailed_response_url": "http://www.diabetes.org/living-with-diabetes/treatment-and-care/blood-glucose-control/hyperglycemia.html",
+            }
+        ],
+        "model": "community.FAQs",
+        "unique_fields": [
+            "id", "question"
+        ]
+
+    }
+]
+

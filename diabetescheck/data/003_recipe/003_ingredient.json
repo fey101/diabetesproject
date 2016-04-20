@@ -127,6 +127,240 @@
                 "name": "nuts, walnuts, chopped",
                 "amount": "1 1/2",
                 "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 23,
+                "name": "lettuce leaves, such as Bibb",
+                "amount": "1",
+                "unit_of_measure": "whole"
+            },
+            {
+                "id": 24,
+                "name": "avocado, peeled and cubed",
+                "amount": "1/4",
+                "unit_of_measure": "whole"
+            },
+            {
+                "id": 25,
+                "name": "ham, deli-style, low-fat, thinly sliced, smoked, sliced into strips",
+                "amount": "28",
+                "unit_of_measure": "grams"
+            },
+            {
+                "id": 26,
+                "name": "grapefruit sections, jar, red and white",
+                "amount": "1",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 27,
+                "name": "nuts, walnuts, chopped",
+                "amount": "1",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 28,
+                "name": "flour, whole wheat",
+                "amount": "1",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 29,
+                "name": "baking powder",
+                "amount": "2",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 30,
+                "name": "egg white(s)",
+                "amount": "1",
+                "unit_of_measure": ""
+            },
+            {
+                "id": 32,
+                "name": "sugar, brown",
+                "amount": "2",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 31,
+                "name": "applesauce, unsweetened",
+                "amount": "1/4",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 33,
+                "name": "ginger, fresh, grated",
+                "amount": "2",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 34,
+                "name": "flour, all-purpose",
+                "amount": "1 1/2",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 35,
+                "name": "cinnamon, ground",
+                "amount": "1",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 36,
+                "name": "milk, fat-free",
+                "amount": "1",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 37,
+                "name": "oil, canola",
+                "amount": "2",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 38,
+                "name": "banana(s), mashed.",
+                "amount": "2",
+                "unit_of_measure": "whole"
+            },
+            {
+                "id": 39,
+                "name": "milk, fat-free",
+                "amount": "1",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 40,
+                "name": "banana(s), peeled",
+                "amount": "1",
+                "unit_of_measure": "whole"
+            },
+            {
+                "id": 41,
+                "name": "yogurt, nonfat, vanilla, frozen",
+                "amount": "1/2",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 42,
+                "name": "vanilla extract",
+                "amount": "1/4",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 43,
+                "name": "margarine with plant sterols, or trans fat-free spread",
+                "amount": "1",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 44,
+                "name": "lettuce, romaine, chopped",
+                "amount": "1",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 45,
+                "name": "tomatoes, chopped",
+                "amount": "1/4",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 46,
+                "name": "avocado, sliced",
+                "amount": "1/4",
+                "unit_of_measure": "medium-sized"
+            },
+            {
+                "id": 47,
+                "name": "beans, red kidney",
+                "amount": "1/2",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 48,
+                "name": "rice, brown",
+                "amount": "1/2",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 49,
+                "name": "beef and mushroom soup, low sodium",
+                "amount": "1 1/2",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 50,
+                "name": "turkey, breast, smoked",
+                "amount": "227",
+                "unit_of_measure": "grams"
+            },
+            {
+                "id": 51,
+                "name": "beans, butter, soaked",
+                "amount": "454",
+                "unit_of_measure": "grams"
+            },
+            {
+                "id": 52,
+                "name": "bay leaf",
+                "amount": "1",
+                "unit_of_measure": "whole"
+            },
+            {
+                "id": 53,
+                "name": "onions, chopped",
+                "amount": "1/4",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 54,
+                "name": "garlic, minced",
+                "amount": "1",
+                "unit_of_measure": "clove(s)"
+            },
+            {
+                "id": 55,
+                "name": "pepper, black, ground",
+                "amount": "1/8",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 56,
+                "name": "thyme",
+                "amount": "1/2",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 57,
+                "name": "cabbage, shredded",
+                "amount": "3",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 58,
+                "name": "lemon juice",
+                "amount": "1",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 59,
+                "name": "sugar",
+                "amount": "2",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 60,
+                "name": "caraway seeds",
+                "amount": "1/4",
+                "unit_of_measure": "teaspoon"
+            },
+            {
+                "id": 61,
+                "name": "chicken, cooked, chopped",
+                "amount": "1",
+                "unit_of_measure": "cup(s)"
             }
         ],
         "model": "recipe.Ingredients",

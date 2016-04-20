@@ -36,6 +36,78 @@
                 "serving": 1,
                 "prep_time": "00:05:00",
                 "category": "snack"
+            },
+            {
+                "id": 5,
+                "name": "Avocado and Grapefruit Sections With Lean Smoked Ham",
+                "description": "",
+                "instructions": "Wash and pat lettuce leaf dry. Place lettuce leaf on plate. Gently mix grapefruit sections with avocado and chopped nuts. Scoop mixture into lettuce leaf. Place ham strips on mixture, roll up sides of lettuce leaf to cover mixture, gently. Enjoy",
+                "serving": 1,
+                "prep_time": "00:05:00",
+                "category": "bf"
+            },
+            {
+                "id": 6,
+                "name": "Banana Ginger Muffins",
+                "description": "",
+                "instructions": "1. Preheat the oven to 360 degrees. Combine the flours, baking powder, and cinnamon in a medium bowl. In a large bowl, combine the remaining ingredients and mix well. Slowly add the dry ingredients to the large bowl and mix until blended. Do not overbeat.\n2. Pour the batter into 12 nonstick muffin cups and bake for 20-25 minutes. Remove muffins from oven and let cool slightly. Remove muffins from pan and let cool completely.",
+                "serving": 12,
+                "prep_time": "01:00:00",
+                "category": "bf"
+            },
+            {
+                "id": 7,
+                "name": "Banana Shake",
+                "description": "",
+                "instructions": "1. Blend the milk and frozen yoghurt in a blender or food processor for about 1 minute.\n2. Add the banana and vanilla; blend a few seconds longer.",
+                "serving": 2,
+                "prep_time": "00:05:00",
+                "category": "bf"
+            },
+            {
+                "id": 8,
+                "name": "Breakfast Sandwich",
+                "description": "",
+                "instructions": "1. Whisk egss in microwave-safe dish. Microwave on high for 1 1/2 to 2 minutes. Remove from Microwave and cover with plastic wrap.\n2. Slice bread in half and Spread each half with plant sterol. Place lettuce, tomatoes and avocado on half of bread.\n3. Cut cooked eggs into slices and put it on top of vegetables. Place other slice of bread to create sandwich. Enjoy.",
+                "serving": 1,
+                "prep_time": "00:10:00",
+                "category": "bf"
+            },
+            {
+                "id": 9,
+                "name": "Rice and Beans",
+                "description": "",
+                "instructions": "1. Cook rice as directed on the package.\n2. Prepare the beans to the taste desired",
+                "serving": 1,
+                "prep_time": "00:45:00",
+                "category": "lunch"
+            },
+            {
+                "id": 10,
+                "name": "Beef and Mushroom soup",
+                "description": "",
+                "instructions": "1. Prepare soup by heating in a covered bowl in the microwave oven(2-3 minutes on high).\n2. Enjoy.",
+                "serving": 1,
+                "prep_time": "00:05:00",
+                "category": "lunch"
+            },
+            {
+                "id": 11,
+                "name": "Butter Beans With Smoked Turkey",
+                "description": "",
+                "instructions": "1. Boil the turkey and onion in 1 quart of water for 45 minutes.\n2. Place the beans, garlic, pepper, bay leaf, and thyme in the water and cook for 1 hour or until the beans are tender. Add the salt in the final 15 minutes of cooking to prevent the beans from becoming tough.",
+                "serving": 8,
+                "prep_time": "02:30:00",
+                "category": "lunch"
+            },
+            {
+                "id": 12,
+                "name": "Cabbage and Chicken Soup",
+                "description": "",
+                "instructions": "1. In a large soup pot, combine the water, broth, tomatoes, celery, onion, potato, bay leaf, salt, thyme, and caraway seeds.\n2. Simmer for 30 minutes to 1 hour. Add the cabbage, chicken, lemon juice, and sugar. Remove the bay leaf and serve",
+                "serving": 8,
+                "prep_time": "01:15:00",
+                "category": "lunch"
             }
         ],
         "model": "recipe.Recipe",

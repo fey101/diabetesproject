@@ -19,9 +19,10 @@ class FAQs(models.Model):
     This is because these questions tend to cut across almost all users
     """
 
-    question = models.CharField(max_length=255)
+    question = models.CharField(max_length=255, unique=True)
     brief_response = models.TextField()
-    detailed_response = models.TextField(null=True, blank=True)
+    detailed_response_url = models.URLField(
+        max_length=400, null=True, blank=True)
 
 
 class ExerciseRoutines(models.Model):

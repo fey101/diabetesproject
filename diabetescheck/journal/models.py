@@ -2,6 +2,7 @@ import datetime
 
 from django.db import models
 from django.utils import timezone
+from django.contrib.postgres.fields import ArrayField
 
 from rest_framework.serializers import ValidationError
 
@@ -11,6 +12,19 @@ from community.models import (
     SugarLevelDetails,
 )
 from recipe.models import Recipe
+
+ACTIVITY_LEVELS = (
+    ("low", "Low"),
+    ("high", "High"),
+    ("moderate", "Moderate"),
+    ("in bed", "You spend the whole day in bed/No movements"),
+)
+EXERCISE_FREQ = (
+    ("random", "Random"),
+    ("15 min", "15 minutes"),
+    ("30 min", "30 minutes"),
+    ("1 hr or more", "1 hour/above 1 hour"),
+)
 
 
 class Valueset(models.Model):
@@ -31,6 +45,11 @@ class HealthDetails(models.Model):
     weight = models.DecimalField(max_digits=10, decimal_places=1)
     height = models.DecimalField(max_digits=10, decimal_places=1)
     diabetic = models.BooleanField()
+    related_conditions = ArrayField(
+        models.CharField(max_length=10), blank=True, null=True)
+    daily_activity_level = models.CharField(
+        max_length=255, choices=ACTIVITY_LEVELS)
+    exercise_freq = models.CharField(max_length=255, choices=EXERCISE_FREQ)
 
     errors = []
 

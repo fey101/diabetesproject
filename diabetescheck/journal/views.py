@@ -1,5 +1,7 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView
 
+from diabetescheck_auth.permissions import IsAuthenticatedOrCreate
+
 from .serializers import (
     GenderSerializer,
     HealthDetailsSerializer,
@@ -24,6 +26,7 @@ class PersonListView(ListCreateAPIView):
     serializer_class = PersonSerializer
     ordering_fields = ('first_name', 'last_name', 'date_of_birth')
     search_field = '@search_index'
+    permission_classes = (IsAuthenticatedOrCreate,)
 
 
 class PersonListDetailView(RetrieveUpdateAPIView):
@@ -44,6 +47,7 @@ class GenderDetailView(RetrieveUpdateAPIView):
 class HealthDetailsListView(ListCreateAPIView):
     queryset = HealthDetails.objects.all()
     serializer_class = HealthDetailsSerializer
+    permission_classes = (IsAuthenticatedOrCreate,)
 
 
 class HealthDetailsDetailView(RetrieveUpdateAPIView):

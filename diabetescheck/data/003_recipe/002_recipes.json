@@ -2,7 +2,6 @@
     {
         "records": [
             {
-                "id": 1,
                 "name": "Apple Yoghurt Crunch",
                 "description": "",
                 "instructions": "Wash apple and chop into small pieces. Spoon Yoghurt into 6 small bowls. Fold in apple, cinnamon, slivers and almonds. Enjoy",
@@ -11,7 +10,6 @@
                 "category": "bf"
             },
             {
-                "id": 2,
                 "name": "Apple-Glazed Chicken With Spinach",
                 "description": "",
                 "instructions": "For glaze, in a small microwave-safe bowl combine apple jelly, soy sauce, thyme, lemon peel, and ginger. Microwave, uncovered, on 100% power (high) for 60 to 90seconds or just until jelly is melted, stirring once. Reserve 2 tablespoons of glaze. Season chicken with salt and pepper. Place chicken on the unheated rack of a broiler pan. Broil 4 to 5 inches from the heat for 12 to 15 minutes or until chicken is tender and no longer pink, turning once halfway through the broiling time and brushing with the remaining glaze during the last 5 minutes of broiling. Discard remainder of glazed used as a brush-on. Meanwhile, coat an unheated large nonstick saucepan with nonstick cooking spray. Preheat over medium heat. Add apple, onion, and garlic to hot saucepan; cook and stir for 3 minutes. Stir in the reserved 2 tablespoons glaze; bring to boiling. Add spinach; toss just until wilted. To serve, slice each chicken breast half crosswise into 6-8 pieces. Divide spinach mixture between 2 dinner plates. Top with sliced chicken.",
@@ -20,7 +18,6 @@
                 "category": "lunch"
             },
             {
-                "id": 3,
                 "name": "Roasted Tomatoes",
                 "description": "",
                 "instructions": "Heat toaster oven to 450 degrees Fahrenheit(233 degrees celcius). Lightly coat small oven-safe pan with cooking spray; then place tomatoes which have been cut in half on it. Spread margarine on each half of the tomatoes. Sprinkle breadcrumbs evenly over each half of tomato. Bake in hot oven for 8-10 minutes. Enjoy",
@@ -29,7 +26,6 @@
                 "category": "supper"
             },
             {
-                "id": 4,
                 "name": "Banana Yoghurt Smoothie",
                 "description": "",
                 "instructions": "Peel one ripe banana and cut it into small cylindrical shapes. Add the banana cuts into a blender together with walnuts and vanilla yoghurt. Pulse slowly until well mashed and smooth.",
@@ -38,7 +34,6 @@
                 "category": "snack"
             },
             {
-                "id": 5,
                 "name": "Avocado and Grapefruit Sections With Lean Smoked Ham",
                 "description": "",
                 "instructions": "Wash and pat lettuce leaf dry. Place lettuce leaf on plate. Gently mix grapefruit sections with avocado and chopped nuts. Scoop mixture into lettuce leaf. Place ham strips on mixture, roll up sides of lettuce leaf to cover mixture, gently. Enjoy",
@@ -47,7 +42,6 @@
                 "category": "bf"
             },
             {
-                "id": 6,
                 "name": "Banana Ginger Muffins",
                 "description": "",
                 "instructions": "1. Preheat the oven to 360 degrees. Combine the flours, baking powder, and cinnamon in a medium bowl. In a large bowl, combine the remaining ingredients and mix well. Slowly add the dry ingredients to the large bowl and mix until blended. Do not overbeat.\n2. Pour the batter into 12 nonstick muffin cups and bake for 20-25 minutes. Remove muffins from oven and let cool slightly. Remove muffins from pan and let cool completely.",
@@ -56,7 +50,6 @@
                 "category": "bf"
             },
             {
-                "id": 7,
                 "name": "Banana Shake",
                 "description": "",
                 "instructions": "1. Blend the milk and frozen yoghurt in a blender or food processor for about 1 minute.\n2. Add the banana and vanilla; blend a few seconds longer.",
@@ -65,7 +58,6 @@
                 "category": "bf"
             },
             {
-                "id": 8,
                 "name": "Breakfast Sandwich",
                 "description": "",
                 "instructions": "1. Whisk egss in microwave-safe dish. Microwave on high for 1 1/2 to 2 minutes. Remove from Microwave and cover with plastic wrap.\n2. Slice bread in half and Spread each half with plant sterol. Place lettuce, tomatoes and avocado on half of bread.\n3. Cut cooked eggs into slices and put it on top of vegetables. Place other slice of bread to create sandwich. Enjoy.",
@@ -74,7 +66,6 @@
                 "category": "bf"
             },
             {
-                "id": 9,
                 "name": "Rice and Beans",
                 "description": "",
                 "instructions": "1. Cook rice as directed on the package.\n2. Prepare the beans to the taste desired",
@@ -83,7 +74,6 @@
                 "category": "lunch"
             },
             {
-                "id": 10,
                 "name": "Beef and Mushroom soup",
                 "description": "",
                 "instructions": "1. Prepare soup by heating in a covered bowl in the microwave oven(2-3 minutes on high).\n2. Enjoy.",
@@ -92,7 +82,6 @@
                 "category": "lunch"
             },
             {
-                "id": 11,
                 "name": "Butter Beans With Smoked Turkey",
                 "description": "",
                 "instructions": "1. Boil the turkey and onion in 1 quart of water for 45 minutes.\n2. Place the beans, garlic, pepper, bay leaf, and thyme in the water and cook for 1 hour or until the beans are tender. Add the salt in the final 15 minutes of cooking to prevent the beans from becoming tough.",
@@ -101,7 +90,6 @@
                 "category": "lunch"
             },
             {
-                "id": 12,
                 "name": "Cabbage and Chicken Soup",
                 "description": "",
                 "instructions": "1. In a large soup pot, combine the water, broth, tomatoes, celery, onion, potato, bay leaf, salt, thyme, and caraway seeds.\n2. Simmer for 30 minutes to 1 hour. Add the cabbage, chicken, lemon juice, and sugar. Remove the bay leaf and serve",

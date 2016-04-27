@@ -2,16 +2,18 @@
     {
         "records": [
             {
-                "id": 1,
                 "weight": 56,
                 "height": 1.6,
-                "diabetic": false
+                "diabetic": false,
+                "daily_activity_level": "moderate",
+                "exercise_freq": "random"
             },
             {
-                "id": 2,
                 "weight": 70,
                 "height": 1.7,
-                "diabetic": false
+                "diabetic": false,
+                "daily_activity_level": "high",
+                "exercise_freq": "random"
             }
         ],
         "model": "journal.HealthDetails",

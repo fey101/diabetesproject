@@ -1,5 +1,4 @@
-# from django.contrib.auth.views import login
-
+from django.contrib.auth import get_user_model
 from rest_framework.generics import (
     ListCreateAPIView,
     RetrieveUpdateDestroyAPIView,
@@ -16,16 +15,19 @@ from .serializers import (
     OauthApplicationSerializer,
 )
 
+from .permissions import IsAuthenticatedOrCreate
+
 
 class UserListView(ListCreateAPIView):
 
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = (IsAuthenticatedOrCreate,)
 
 
 class UserDetailView(RetrieveUpdateDestroyAPIView):
 
-    queryset = User.objects.all()
+    queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
     lookup_field = 'pk'
 

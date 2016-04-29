@@ -91,6 +91,36 @@
                 "question": "What are the symptoms of hyperglycemia?",
                 "brief_response": "Symptoms of hypoglycemia include High blood glucose, High levels of sugar in the urine, Frequent urination, and Increased thirst",
                 "detailed_response_url": "http://www.diabetes.org/living-with-diabetes/treatment-and-care/blood-glucose-control/hyperglycemia.html",
+            },
+            {
+                "id": 16,
+                "question": "Understanding Food Groups",
+                "brief_response": "There are 3 basic food groups: fats, proteins, and carbohydrates. The carbohydrates are the foods that can be broken down into sugar. It is essential to have all 3 food groups in your diet to have good nutrition.",
+                "detailed_response_url": "http://www.endocrineweb.com/conditions/diabetes/treatment-diabetes#The_Diabetic_Diet",
+            },
+            {
+                "id": 17,
+                "question": "Why Count Carbohydrates?",
+                "brief_response": "Carbohydrates make your blood glucose level go up. If you know how much carbohydrates you've eaten, you have a good idea what your blood glucose level is going to do. The more carbohydrates you eat, the higher your blood sugar will go up. Space out your carbohydrates throughout the day to avoid sugar 'loading'",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 18,
+                "question": "Which Foods Contain Carbohydrates?",
+                "brief_response": "Most of the carbohydrate we eat comes from 3 food groups: starch, fruit, and milk. Vegetables also contain some carbohydrates, but foods in the meat and fat groups contain very little carbohydrates",
+                "detailed_response_url": "",
+            },
+            {
+                "id": 19,
+                "question": "Why then not avoid carbohydrates all together?",
+                "brief_response": "Choosing the right kind of carbohydrates and spacing them out evenly throughout the day can keep blood sugar from rising too high, too fast (90% of the carbohydrate calories you digest end up as glucose, so they have a much bigger impact on blood sugar than fat or protein).The goal is to take in enough carbohydrates to nourish ourselves, but never so much that it causes high blood sugars. Up until about the mid-1990s experts believed that people with diabetes should never eat foods that contain so-called 'simple' sugars those found in cakes and candy and instead eat 'complex' carbohydrates, or those with longer chains of sugar molecules such as potatoes, fruit, vegetables, and grains.",
+                "detailed_response_url": "http://www.health.com/health/condition-article/0,,20188651,00.html",
+            },
+            {
+                "id": 20,
+                "question": "Where then do counting calories come in?",
+                "brief_response": "The amount of food you eat is closely related to blood sugar control. If you eat more food than is recommended, your blood sugar goes up. Although foods containing carbohydrates (carbs) have the most impact on blood sugars, the calories from all foods will affect blood sugar. Calories also contribute to body weight. You also want to keep count of it so that you keep you weight in check as being overweight contributes to insulin resistance",
+                "detailed_response_url": "http://www.helpguide.org/articles/diet-weight-loss/diabetes-diet-and-food-tips.htm",
             }
         ],
         "model": "community.FAQs",

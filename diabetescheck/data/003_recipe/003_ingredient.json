@@ -361,6 +361,54 @@
                 "name": "chicken, cooked, chopped",
                 "amount": "1",
                 "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 62,
+                "name": "baking potatoes, peeled and coarsely chopped",
+                "amount": "1 1/2",
+                "unit_of_measure": "pounds"
+            },
+            {
+                "id": 63,
+                "name": "water",
+                "amount": "2 1/2",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 64,
+                "name": "salt",
+                "amount": "1 1/2",
+                "unit_of_measure": "teaspoons"
+            },
+            {
+                "id": 66,
+                "name": "frozen green peas",
+                "amount": "2",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 67,
+                "name": "butter",
+                "amount": "1",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 68,
+                "name": "finely chopped onion",
+                "amount": "3/4",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 69,
+                "name": "chopped spinach, kale, or watercress(about 113 grams)",
+                "amount": "4",
+                "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 65,
+                "name": "frozen whole-kernel corn",
+                "amount": "1 1/2",
+                "unit_of_measure": "cup(s)"
             }
         ],
         "model": "recipe.Ingredients",

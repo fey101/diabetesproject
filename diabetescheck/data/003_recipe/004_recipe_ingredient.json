@@ -549,6 +549,78 @@
                 "ingredient": {
                     "id": 61
                 }
+            },
+            {
+                "id": 62,
+                "recipe": {
+                    "id": 13
+                },
+                "ingredient": {
+                    "id": 62
+                }
+            },
+            {
+                "id": 63,
+                "recipe": {
+                    "id": 13
+                },
+                "ingredient": {
+                    "id": 63
+                }
+            },
+            {
+                "id": 64,
+                "recipe": {
+                    "id": 13
+                },
+                "ingredient": {
+                    "id": 64
+                }
+            },
+            {
+                "id": 65,
+                "recipe": {
+                    "id": 13
+                },
+                "ingredient": {
+                    "id": 65
+                }
+            },
+            {
+                "id": 66,
+                "recipe": {
+                    "id": 13
+                },
+                "ingredient": {
+                    "id": 66
+                }
+            },
+            {
+                "id": 67,
+                "recipe": {
+                    "id": 13
+                },
+                "ingredient": {
+                    "id": 67
+                }
+            },
+            {
+                "id": 68,
+                "recipe": {
+                    "id": 13
+                },
+                "ingredient": {
+                    "id": 68
+                }
+            },
+            {
+                "id": 69,
+                "recipe": {
+                    "id": 13
+                },
+                "ingredient": {
+                    "id": 69
+                }
             }
         ],
         "model": "recipe.RecipeIngredient",
@@ -556,4 +628,4 @@
             "id"
         ]
     }
-]
+]7

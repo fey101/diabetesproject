@@ -44,7 +44,12 @@ class RecipeIngredient(models.Model):
 
 
 class Nutrients(models.Model):
-    """The nutritional value details of a recipe."""
+    """The nutritional value details of a recipe.
+
+    Always start with "Calories" as first nutrient and have "Cholesterol"
+    as 7th, in providing data for purposes of sync with frontend.
+    TODO: model this object better to avoid order being important.
+    """
 
     name = models.CharField(max_length=255)
     quantity = models.DecimalField(max_digits=8, decimal_places=2)

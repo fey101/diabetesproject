@@ -20,10 +20,19 @@ from .serializers import (
     RecipeNutrientSerializer,
 )
 
+from .filters import (
+    RecipeFilter,
+    IngredientsFilter,
+    RecipeIngredientFilter,
+    NutrientsFilter,
+    RecipeNutrientsFilter
+)
+
 
 class RecipeIngredientListView(ListCreateAPIView):
     queryset = RecipeIngredient.objects.all()
     serializer_class = RecipeIngredientSerializer
+    filter_class = RecipeIngredientFilter
 
 
 class RecipeIngredientDetailView(RetrieveUpdateDestroyAPIView):
@@ -36,6 +45,7 @@ class RecipeListView(ListCreateAPIView):
 
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
+    filter_class = RecipeFilter
 
 
 class RecipeDetailView(RetrieveUpdateDestroyAPIView):
@@ -49,6 +59,7 @@ class IngredientsListView(ListCreateAPIView):
 
     queryset = Ingredients.objects.all()
     serializer_class = IngredientSerializer
+    filter_class = IngredientsFilter
 
 
 class IngredientDetailView(RetrieveUpdateDestroyAPIView):
@@ -62,6 +73,7 @@ class NutrientsListView(ListCreateAPIView):
 
     queryset = Nutrients.objects.all()
     serializer_class = NutrientsSerializer
+    filter_class = NutrientsFilter
 
     # def create(self, request):
     #     from pdb import set_trace
@@ -95,6 +107,7 @@ class RecipeNutrientListView(ListCreateAPIView):
 
     queryset = RecipeNutrients.objects.all()
     serializer_class = RecipeNutrientSerializer
+    filter_class = RecipeNutrientsFilter
 
 
 class RecipeNutrientDetailView(RetrieveUpdateDestroyAPIView):

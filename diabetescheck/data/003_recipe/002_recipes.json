@@ -96,6 +96,14 @@
                 "serving": 8,
                 "prep_time": "01:15:00",
                 "category": "lunch"
+            },
+            {
+                "name": "Mashed Peas and Potatoes with Corn (Irio)",
+                "description": "A quick dish of Kenyan-kikuyu region staples",
+                "instructions": "1. Combine potatoes, 2 1/2 cups water, and salt in medium saucepan; cover and bring to a boil over high heat.Reduce heat to medium; simmer, covered, 7 minutes. Add peas; cover and cook 5 minutes or until potatoes are tender. Drain potato mixture in a colander over a bowl, reserving 1 cup cooking liquid.\n2. Melt butter in saucepan over medium heat. Add onion, saute 4 minutes or until tender. Add spinach and corn; cook 3-4 minutes or until spinach wilts and corn is thoroughly heated. Remove from heat.\n3. Pass potatoes and peas mixture through a ricer or food mill or mash with a potato masher. Stir potato mixture and enough of reserved cooking liquid into spinach mixture to create a creamy texture.\n\n Note: If you have leftovers, you can refrigerate them, and then the next day form them into patties and pan-fry.",
+                "serving": 10,
+                "prep_time": "00:40:00",
+                "category": "supper"
             }
         ],
         "model": "recipe.Recipe",

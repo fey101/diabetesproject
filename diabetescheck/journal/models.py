@@ -190,6 +190,7 @@ class DetailedFoodLog(models.Model):
     time = models.TimeField(auto_now=True)
     food = models.ForeignKey(
         Recipe, related_name="recipe_persons")
+    period = models.CharField(max_length=255)
     calories_gained = models.DecimalField(max_digits=20, decimal_places=3)
     recommendation = models.CharField(
         max_length=255, blank=True, null=True)

@@ -43,7 +43,7 @@ class Gender(Valueset):
 
 class HealthDetails(models.Model):
     weight = models.DecimalField(max_digits=10, decimal_places=1)
-    height = models.DecimalField(max_digits=10, decimal_places=1)
+    height = models.DecimalField(max_digits=10, decimal_places=2)
     diabetic = models.BooleanField()
     related_conditions = ArrayField(
         models.CharField(max_length=10), blank=True, null=True)

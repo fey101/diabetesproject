@@ -29,7 +29,7 @@ class UserDetailView(RetrieveUpdateDestroyAPIView):
 
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
-    lookup_field = 'pk'
+    lookup_field = 'id'
 
 
 class OauthApplicationListView(ListCreateAPIView):

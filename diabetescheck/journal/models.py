@@ -55,7 +55,48 @@ class HealthDetails(models.Model):
 
     @property
     def bmi(self):
-        return self.weight / ((self.height / 100) ** 2)
+        # NB height is in metres
+        return round(self.weight / (self.height ** 2), 4)
+
+    @property
+    def hbw(self):
+        """
+        Healthy Body-Weight(HBW).
+
+        Obtained using a bmi of 21 and person's height.
+        """
+        hbw = 21 * (self.height ** 2)
+        return round(hbw)
+
+    @property
+    def daily_calorie_need(self):
+        """Amount of calories needed to satisfy activity level lifestyle."""
+        activity = (self.daily_activity_level, self.exercise_freq)
+        if activity == ("in bed", "random"):
+            hbr = 10
+        elif activity == ("low", "random"):
+            hbr = 11
+        elif activity == ("low", "15 min"):
+            hbr = 12
+        elif activity == ("low", "30 min"):
+            hbr = 13
+        elif activity == ("low", "1 hr or more") or activity == (
+                "moderate", "random"):
+                hbr = 14
+        elif activity == ("moderate", "15 min"):
+            hbr = 15
+        elif activity == ("moderate", "30 min"):
+            hbr = 16
+        elif activity == ("moderate", "1 hr or more") or activity == (
+                "high", "random"):
+                hbr = 17
+        elif activity == ("high", "15 min"):
+            hbr = 18
+        elif activity == ("high", "30 min"):
+            hbr = 19
+        elif activity == ("high", "1 hr or more"):
+            hbr = 20
+        return 21 * (self.height ** 2) * hbr
 
     def validate_small_height(self):
         error_msg = "The height value should be positive"
@@ -191,7 +232,11 @@ class DetailedFoodLog(models.Model):
     food = models.ForeignKey(
         Recipe, related_name="recipe_persons")
     period = models.CharField(max_length=255)
+    # the following are in relation to the wholesome period and not just ...
+    # a single recipe. i.e one period log might have many recipes and a single
+    # recipe can be consumed as more than one serving per period.
     calories_gained = models.DecimalField(max_digits=20, decimal_places=3)
+    cholesterol_gained = models.DecimalField(max_digits=20, decimal_places=3)
     recommendation = models.CharField(
         max_length=255, blank=True, null=True)
 

@@ -32,6 +32,10 @@ class PersonFieldMixin(serializers.ModelSerializer):
 
 
 class HealthDetailsSerializer(serializers.ModelSerializer):
+    bmi = serializers.ReadOnlyField()
+    hbw = serializers.ReadOnlyField()
+    daily_calorie_need = serializers.ReadOnlyField()
+
     class Meta:
         model = HealthDetails
 

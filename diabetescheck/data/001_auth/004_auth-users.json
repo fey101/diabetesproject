@@ -7,7 +7,7 @@
                 "first_name": "Faith",
                 "last_name": "Kangai",
                 "is_admin": true,
-                "is_staff": false,
+                "is_staff": true,
                 "is_initial": true,
                 "is_active": true
 
@@ -17,7 +17,7 @@
                 "password": "pbkdf2_sha256$20000$NdnK84zZYjkt$f5btz29FtR/TGhQrbQKyDLs0VBSQYiKeXBHiBz2WCMU=",
                 "first_name": "Mark",
                 "last_name": "Maina",
-                "is_admin": false,
+                "is_admin": true,
                 "is_staff": true,
                 "is_initial": false,
                 "is_active": true

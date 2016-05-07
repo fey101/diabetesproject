@@ -18,9 +18,11 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 
 from diabetescheck_auth.views import MeView
+from django.contrib import admin
 
 
 urlpatterns = [
+    url(r'^admin/', admin.site.urls),
     url(r'^o/',
         include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^me/$', MeView.as_view(), name='me'),

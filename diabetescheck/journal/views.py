@@ -1,4 +1,4 @@
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 from diabetescheck_auth.permissions import IsAuthenticatedOrCreate
 
@@ -29,7 +29,7 @@ class PersonListView(ListCreateAPIView):
     permission_classes = (IsAuthenticatedOrCreate,)
 
 
-class PersonListDetailView(RetrieveUpdateAPIView):
+class PersonListDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
 
@@ -39,7 +39,7 @@ class GenderListView(ListCreateAPIView):
     serializer_class = GenderSerializer
 
 
-class GenderDetailView(RetrieveUpdateAPIView):
+class GenderDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Gender.objects.all()
     serializer_class = GenderSerializer
 
@@ -50,7 +50,7 @@ class HealthDetailsListView(ListCreateAPIView):
     permission_classes = (IsAuthenticatedOrCreate,)
 
 
-class HealthDetailsDetailView(RetrieveUpdateAPIView):
+class HealthDetailsDetailView(RetrieveUpdateDestroyAPIView):
     queryset = HealthDetails.objects.all()
     serializer_class = HealthDetailsSerializer
 
@@ -60,7 +60,7 @@ class FoodLogListView(ListCreateAPIView):
     serializer_class = FoodLogSerializer
 
 
-class FoodLogDetailView(RetrieveUpdateAPIView):
+class FoodLogDetailView(RetrieveUpdateDestroyAPIView):
     queryset = DetailedFoodLog.objects.all()
     serializer_class = FoodLogSerializer
 
@@ -70,7 +70,7 @@ class ExerciseLogListView(ListCreateAPIView):
     serializer_class = ExerciseLogSerializer
 
 
-class ExerciseLogDetailView(RetrieveUpdateAPIView):
+class ExerciseLogDetailView(RetrieveUpdateDestroyAPIView):
     queryset = DetailedExerciseLog.objects.all()
     serializer_class = ExerciseLogSerializer
 
@@ -80,6 +80,6 @@ class SugarLevelsLogListView(ListCreateAPIView):
     serializer_class = SugarLevelsLogSerializer
 
 
-class SugarLevelsLogDetailView(RetrieveUpdateAPIView):
+class SugarLevelsLogDetailView(RetrieveUpdateDestroyAPIView):
     queryset = DetailedSugarLog.objects.all()
     serializer_class = SugarLevelsLogSerializer

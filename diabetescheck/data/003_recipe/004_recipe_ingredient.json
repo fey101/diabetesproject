@@ -621,6 +621,87 @@
                 "ingredient": {
                     "id": 69
                 }
+            },
+            {
+                "id": 70,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 70
+                }
+            },
+            {
+                "id": 71,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 71
+                }
+            },
+            {
+                "id": 72,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 72
+                }
+            },
+            {
+                "id": 73,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 73
+                }
+            },
+            {
+                "id": 74,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 74
+                }
+            },
+            {
+                "id": 75,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 75
+                }
+            },
+            {
+                "id": 76,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 76
+                }
+            },
+            {
+                "id": 77,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 77
+                }
+            },
+            {
+                "id": 78,
+                "recipe": {
+                    "id": 20
+                },
+                "ingredient": {
+                    "id": 78
+                }
             }
         ],
         "model": "recipe.RecipeIngredient",

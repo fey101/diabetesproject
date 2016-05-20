@@ -20,6 +20,8 @@ from .models import (
     DetailedSugarLog,
 )
 
+from .filters import (DetailedFoodLogFilter)
+
 
 class PersonListView(ListCreateAPIView):
     queryset = Person.objects.all()
@@ -58,6 +60,7 @@ class HealthDetailsDetailView(RetrieveUpdateDestroyAPIView):
 class FoodLogListView(ListCreateAPIView):
     queryset = DetailedFoodLog.objects.all()
     serializer_class = FoodLogSerializer
+    filter_class = DetailedFoodLogFilter
 
 
 class FoodLogDetailView(RetrieveUpdateDestroyAPIView):

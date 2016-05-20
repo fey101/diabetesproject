@@ -409,6 +409,60 @@
                 "name": "frozen whole-kernel corn",
                 "amount": "1 1/2",
                 "unit_of_measure": "cup(s)"
+            },
+            {
+                "id": 70,
+                "name": "Enriched Unbleached White Flour",
+                "amount": "1/2",
+                "unit_of_measure": "cups"
+            },
+            {
+                "id": 71,
+                "name": " Vegetable Oil 100% Pure",
+                "amount": "1",
+                "unit_of_measure": "serving"
+            },
+            {
+                "id": 72,
+                "name": "Lentils, Mature Seeds",
+                "amount": "1",
+                "unit_of_measure": "cup"
+            },
+            {
+                "id": 73,
+                "name": "Extra Virgin Olive Oil",
+                "amount": "1/2",
+                "unit_of_measure": "tablespoons of"
+            },
+            {
+                "id": 74,
+                "name": "Tomatoes, Crushed/Chopped",
+                "amount": "1",
+                "unit_of_measure": "serving"
+            },
+            {
+                "id": 75,
+                "name": "Ginger, Ground",
+                "amount": "1/2",
+                "unit_of_measure": "tablespoon"
+            },
+            {
+                "id": 76,
+                "name": "Roasted Garlic",
+                "amount": "0.13",
+                "unit_of_measure": "cup"
+            },
+            {
+                "id": 77,
+                "name": "chopped Onions",
+                "amount": "1",
+                "unit_of_measure": "tablespoon(s)"
+            },
+            {
+                "id": 78,
+                "name": "Celery Sticks",
+                "amount": "1",
+                "unit_of_measure": "serving"
             }
         ],
         "model": "recipe.Ingredients",

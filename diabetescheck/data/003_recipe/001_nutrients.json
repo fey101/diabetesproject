@@ -672,6 +672,342 @@
                 "name": "Calcium",
                 "quantity": 24.0,
                 "unit": "mg"
+            },
+            {
+                "id": 113,
+                "name": "Calories",
+                "quantity": 16.0,
+                "unit": ""
+            },
+            {
+                "id": 114,
+                "name": "Sugar",
+                "quantity": 16.0,
+                "unit": "g"
+            },
+            {
+                "id": 115,
+                "name": "Saturated Fat",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 116,
+                "name": "Sodium",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 117,
+                "name": "Fiber",
+                "quantity": 0,
+                "unit": "g"
+            },
+            {
+                "id": 118,
+                "name": "Protein",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 119,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 120,
+                "name": "Carbohydrates",
+                "quantity": 4.2,
+                "unit": "g"
+            },
+            {
+                "id": 121,
+                "name": "Calories",
+                "quantity": 150.0,
+                "unit": ""
+            },
+            {
+                "id": 122,
+                "name": "Saturated Fat",
+                "quantity": 0.2,
+                "unit": "g"
+            },
+            {
+                "id": 123,
+                "name": "Sodium",
+                "quantity": 147.0,
+                "unit": "mg"
+            },
+            {
+                "id": 124,
+                "name": "Dietary Fiber",
+                "quantity": 0.8,
+                "unit": "g"
+            },
+            {
+                "id": 125,
+                "name": "Protein",
+                "quantity": 2.7,
+                "unit": "g"
+            },
+            {
+                "id": 126,
+                "name": "Total Fat",
+                "quantity": 1.0,
+                "unit": "g"
+            },
+            {
+                "id": 127,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 128,
+                "name": "Total Carbs",
+                "quantity": 15.0,
+                "unit": "g"
+            },
+            {
+                "id": 129,
+                "name": "Calories",
+                "quantity": 150.0,
+                "unit": ""
+            },
+            {
+                "id": 130,
+                "name": "Saturated Fat",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 131,
+                "name": "Sodium",
+                "quantity": 60.0,
+                "unit": "mg"
+            },
+            {
+                "id": 132,
+                "name": "Fiber",
+                "quantity": 3.0,
+                "unit": "g"
+            },
+            {
+                "id": 133,
+                "name": "Protein",
+                "quantity": 6.0,
+                "unit": "g"
+            },
+            {
+                "id": 134,
+                "name": "Total Fat",
+                "quantity": 5.0,
+                "unit": "g"
+            },
+            {
+                "id": 135,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 136,
+                "name": "Total Carbs",
+                "quantity": 18.0,
+                "unit": "g"
+            },
+            {
+                "id": 137,
+                "name": "Calories",
+                "quantity": 73.0,
+                "unit": ""
+            },
+            {
+                "id": 138,
+                "name": "Saturated Fat",
+                "quantity": 0.2,
+                "unit": "g"
+            },
+            {
+                "id":139,
+                "name": "Sodium",
+                "quantity": 155.0,
+                "unit": "mg"
+            },
+            {
+                "id": 140,
+                "name": "Potassium",
+                "quantity": 71.0,
+                "unit": "mg"
+            },
+            {
+                "id": 141,
+                "name": "Protein",
+                "quantity": 2.7,
+                "unit": "g"
+            },
+            {
+                "id": 142,
+                "name": "Total Fat",
+                "quantity": 0.8,
+                "unit": "g"
+            },
+            {
+                "id": 143,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 144,
+                "name": "Total Carbs",
+                "quantity": 14.0,
+                "unit": "g"
+            },
+            {
+                "id": 145,
+                "name": "Calories",
+                "quantity": 1.0,
+                "unit": ""
+            },
+            {
+                "id": 152,
+                "name": "Saturated Fat",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 146,
+                "name": "Sodium",
+                "quantity": 5.0,
+                "unit": "mg"
+            },
+            {
+                "id": 147,
+                "name": "Caffeine",
+                "quantity": 95,
+                "unit": "mg"
+            },
+            {
+                "id": 148,
+                "name": "Protein",
+                "quantity": 0.3,
+                "unit": "g"
+            },
+            {
+                "id": 149,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 150,
+                "name": "Total Fat",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 151,
+                "name": "Total Carbs",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 153,
+                "name": "Calories",
+                "quantity": 136.0,
+                "unit": ""
+            },
+            {
+                "id": 154,
+                "name": "Saturated Fat",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 155,
+                "name": "Sodium",
+                "quantity": 5.0,
+                "unit": "mg"
+            },
+            {
+                "id": 156,
+                "name": "Potassium",
+                "quantity": 105.0,
+                "unit": "mg"
+            },
+            {
+                "id": 157,
+                "name": "Protein",
+                "quantity": 0.5,
+                "unit": "g"
+            },
+            {
+                "id": 158,
+                "name": "Total Fat",
+                "quantity": 0.0,
+                "unit": "g"
+            },
+            {
+                "id": 159,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 160,
+                "name": "Total Carbs",
+                "quantity": 33.0,
+                "unit": "g"
+            },
+            {
+                "id": 161,
+                "name": "Calories",
+                "quantity": 718.0,
+                "unit": ""
+            },
+            {
+                "id": 162,
+                "name": "Saturated Fat",
+                "quantity": 3.2,
+                "unit": "g"
+            },
+            {
+                "id": 163,
+                "name": "Sodium",
+                "quantity": 246.0,
+                "unit": "mg"
+            },
+            {
+                "id": 164,
+                "name": "Potassium",
+                "quantity": 1129.0,
+                "unit": "mg"
+            },
+            {
+                "id": 165,
+                "name": "Protein",
+                "quantity": 20.3,
+                "unit": "g"
+            },
+            {
+                "id": 166,
+                "name": "Total Fat",
+                "quantity": 23.4,
+                "unit": "g"
+            },
+            {
+                "id": 167,
+                "name": "Cholesterol",
+                "quantity": 0.0,
+                "unit": "mg"
+            },
+            {
+                "id": 168,
+                "name": "Total Carbs",
+                "quantity": 106.1,
+                "unit": "g"
             }
         ],
         "model": "recipe.Nutrients",

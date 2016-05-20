@@ -1023,6 +1023,516 @@
                 "nutrient": {
                     "id": 112
                 }
+            },
+            {
+                "id": 113,
+                "recipe": {
+                    "id": 14
+                },
+                "nutrient": {
+                    "id": 113
+                }
+            },
+            {
+                "id": 114,
+                "recipe": {
+                    "id": 14
+                },
+                "nutrient": {
+                    "id": 114
+                }
+            },
+            {
+                "id": 115,
+                "recipe": {
+                    "id": 14
+                },
+                "nutrient": {
+                    "id": 115
+                }
+            },
+            {
+                "id": 116,
+                "recipe": {
+                    "id": 14
+                },
+                "nutrient": {
+                    "id": 116
+                }
+            },
+            {
+                "id": 117,
+                "recipe": {
+                    "id": 14
+                },
+                "nutrient": {
+                    "id": 117
+                }
+            },
+            {
+                "id": 118,
+                "recipe": {
+                    "id": 14
+                },
+                "nutrient": {
+                    "id": 118
+                }
+            },
+            {
+                "id": 119,
+                "recipe": {
+                    "id": 14
+                },
+                "nutrient": {
+                    "id": 119
+                }
+            },
+            {
+                "id": 120,
+                "recipe": {
+                    "id": 14
+                },
+                "nutrient": {
+                    "id": 120
+                }
+            },
+            {
+                "id": 121,
+                "recipe": {
+                    "id": 15
+                },
+                "nutrient": {
+                    "id": 121
+                }
+            },
+            {
+                "id": 122,
+                "recipe": {
+                    "id": 15
+                },
+                "nutrient": {
+                    "id": 122
+                }
+            },
+            {
+                "id": 123,
+                "recipe": {
+                    "id": 15
+                },
+                "nutrient": {
+                    "id": 123
+                }
+            },
+            {
+                "id": 124,
+                "recipe": {
+                    "id": 15
+                },
+                "nutrient": {
+                    "id": 124
+                }
+            },
+            {
+                "id": 125,
+                "recipe": {
+                    "id": 15
+                },
+                "nutrient": {
+                    "id": 125
+                }
+            },
+            {
+                "id": 126,
+                "recipe": {
+                    "id": 15
+                },
+                "nutrient": {
+                    "id": 126
+                }
+            },
+            {
+
+                "id": 127,
+                "recipe": {
+                    "id": 15
+                },
+                "nutrient": {
+                    "id":127
+                }
+            },
+            {
+                "id": 128,
+                "recipe": {
+                    "id": 15
+                },
+                "nutrient": {
+                    "id": 128
+                }
+            },
+            {
+                "id": 129,
+                "recipe": {
+                    "id": 16
+                },
+                "nutrient": {
+                    "id": 129
+                }
+            },
+            {
+                "id": 130,
+                "recipe": {
+                    "id": 16
+                },
+                "nutrient": {
+                    "id": 130
+                }
+            },
+            {
+                "id": 131,
+                "recipe": {
+                    "id": 16
+                },
+                "nutrient": {
+                    "id": 131
+                }
+            },
+            {
+                "id": 132,
+                "recipe": {
+                    "id": 16
+                },
+                "nutrient": {
+                    "id": 132
+                }
+            },
+            {
+                "id": 133,
+                "recipe": {
+                    "id": 16
+                },
+                "nutrient": {
+                    "id": 133
+                }
+            },
+            {
+                "id": 134,
+                "recipe": {
+                    "id": 16
+                },
+                "nutrient": {
+                    "id": 134
+                }
+            },
+            {
+
+                "id": 135,
+                "recipe": {
+                    "id": 16
+                },
+                "nutrient": {
+                    "id":135
+                }
+            },
+            {
+                "id": 136,
+                "recipe": {
+                    "id": 16
+                },
+                "nutrient": {
+                    "id": 136
+                }
+            },
+            {
+                "id": 137,
+                "recipe": {
+                    "id": 17
+                },
+                "nutrient": {
+                    "id": 137
+                }
+            },
+            {
+                "id": 138,
+                "recipe": {
+                    "id": 17
+                },
+                "nutrient": {
+                    "id": 138
+                }
+            },
+            {
+                "id": 139,
+                "recipe": {
+                    "id": 17
+                },
+                "nutrient": {
+                    "id": 139
+                }
+            },
+            {
+                "id": 140,
+                "recipe": {
+                    "id": 17
+                },
+                "nutrient": {
+                    "id": 140
+                }
+            },
+            {
+                "id": 141,
+                "recipe": {
+                    "id": 17
+                },
+                "nutrient": {
+                    "id": 141
+                }
+            },
+            {
+
+                "id": 142,
+                "recipe": {
+                    "id": 17
+                },
+                "nutrient": {
+                    "id":142
+                }
+            },
+            {
+                "id": 143,
+                "recipe": {
+                    "id": 17
+                },
+                "nutrient": {
+                    "id": 143
+                }
+            },
+            {
+                "id": 144,
+                "recipe": {
+                    "id": 17
+                },
+                "nutrient": {
+                    "id": 144
+                }
+            },
+            {
+                "id": 145,
+                "recipe": {
+                    "id": 18
+                },
+                "nutrient": {
+                    "id": 145
+                }
+            },
+            {
+                "id": 146,
+                "recipe": {
+                    "id": 18
+                },
+                "nutrient": {
+                    "id": 146
+                }
+            },
+            {
+                "id": 147,
+                "recipe": {
+                    "id": 18
+                },
+                "nutrient": {
+                    "id": 147
+                }
+            },
+            {
+                "id": 148,
+                "recipe": {
+                    "id": 18
+                },
+                "nutrient": {
+                    "id": 148
+                }
+            },
+            {
+                "id": 149,
+                "recipe": {
+                    "id": 18
+                },
+                "nutrient": {
+                    "id": 149
+                }
+            },
+            {
+                "id": 150,
+                "recipe": {
+                    "id": 18
+                },
+                "nutrient": {
+                    "id": 150
+                }
+            },
+            {
+
+                "id": 151,
+                "recipe": {
+                    "id": 18
+                },
+                "nutrient": {
+                    "id":151
+                }
+            },
+            {
+                "id": 152,
+                "recipe": {
+                    "id": 18
+                },
+                "nutrient": {
+                    "id": 152
+                }
+            },
+            {
+                "id": 153,
+                "recipe": {
+                    "id": 19
+                },
+                "nutrient": {
+                    "id": 153
+                }
+            },
+            {
+                "id": 154,
+                "recipe": {
+                    "id": 19
+                },
+                "nutrient": {
+                    "id": 154
+                }
+            },
+            {
+                "id": 155,
+                "recipe": {
+                    "id": 19
+                },
+                "nutrient": {
+                    "id": 155
+                }
+            },
+            {
+                "id": 156,
+                "recipe": {
+                    "id": 19
+                },
+                "nutrient": {
+                    "id": 156
+                }
+            },
+            {
+                "id": 157,
+                "recipe": {
+                    "id": 19
+                },
+                "nutrient": {
+                    "id": 157
+                }
+            },
+            {
+                "id": 158,
+                "recipe": {
+                    "id": 19
+                },
+                "nutrient": {
+                    "id": 158
+                }
+            },
+            {
+
+                "id": 159,
+                "recipe": {
+                    "id": 19
+                },
+                "nutrient": {
+                    "id":159
+                }
+            },
+            {
+                "id": 160,
+                "recipe": {
+                    "id": 19
+                },
+                "nutrient": {
+                    "id": 160
+                }
+            },
+            {
+                "id": 161,
+                "recipe": {
+                    "id": 20
+                },
+                "nutrient": {
+                    "id": 161
+                }
+            },
+            {
+                "id": 162,
+                "recipe": {
+                    "id": 20
+                },
+                "nutrient": {
+                    "id": 162
+                }
+            },
+            {
+                "id": 163,
+                "recipe": {
+                    "id": 20
+                },
+                "nutrient": {
+                    "id": 163
+                }
+            },
+            {
+                "id": 164,
+                "recipe": {
+                    "id": 20
+                },
+                "nutrient": {
+                    "id": 164
+                }
+            },
+            {
+                "id": 165,
+                "recipe": {
+                    "id": 20
+                },
+                "nutrient": {
+                    "id":165
+                }
+            },
+            {
+                "id": 166,
+                "recipe": {
+                    "id": 20
+                },
+                "nutrient": {
+                    "id": 166
+                }
+            },
+            {
+
+                "id": 167,
+                "recipe": {
+                    "id": 20
+                },
+                "nutrient": {
+                    "id":167
+                }
+            },
+            {
+                "id": 168,
+                "recipe": {
+                    "id": 20
+                },
+                "nutrient": {
+                    "id": 168
+                }
             }
         ],
         "model": "recipe.RecipeNutrients",

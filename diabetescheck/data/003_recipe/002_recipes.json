@@ -55,7 +55,7 @@
                 "instructions": "1. Blend the milk and frozen yoghurt in a blender or food processor for about 1 minute.\n2. Add the banana and vanilla; blend a few seconds longer.",
                 "serving": 2,
                 "prep_time": "00:05:00",
-                "category": "bf"
+                "category": "snack"
             },
             {
                 "name": "Breakfast Sandwich",
@@ -104,7 +104,64 @@
                 "serving": 10,
                 "prep_time": "00:40:00",
                 "category": "supper"
+            },
+            {
+                "name": "A teaspoon of Sugar",
+                "description": "",
+                "instructions": "Ready for use",
+                "serving": 1,
+                "prep_time": "00:00:00",
+                "category": "bf"
+            },
+            {
+                "name": "A Slice of White Bread",
+                "description": "",
+                "instructions": "Can be bought ready made from a shop",
+                "serving": 1,
+                "prep_time": "00:00:00",
+                "category": "bf"
+            },
+            {
+                "name": "One Slice Cooked Bacon",
+                "description": "",
+                "instructions": "Microwaved or pan fried",
+                "serving": 1,
+                "prep_time": "00:04:00",
+                "category": "bf"
+            },
+            {
+                "name": "A Slice of Brown Bread",
+                "description": "",
+                "instructions": "Can be bought ready made from a shop. Bread, wheat germ, toasted",
+                "serving": 1,
+                "prep_time": "00:00:00",
+                "category": "bf"
+            },
+            {
+                "name": "A cup of coffee",
+                "description": "",
+                "instructions": "237 g of black coffee: Coffee is a brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant.",
+                "serving": 1,
+                "prep_time": "00:02:00",
+                "category": "bf"
+            },
+            {
+                "name": "A cup of juice(249 g)",
+                "description": "",
+                "instructions": "Juice is a liquid that is naturally contained in fruit and vegetables. It can also refer to liquids that are flavored with these or other biological food sources such as meat and seafood.",
+                "serving": 1,
+                "prep_time": "00:02:00",
+                "category": "snack"
+            },
+            {
+                "name": "Flat Bread with Spicy Lentils(Chapati Ndengu)",
+                "description": "make chapati na ndengu using healthy ingredients. 1 serving=535.8g",
+                "instructions": "fry flat bread with spicy lentils",
+                "serving": 1,
+                "prep_time": "01:00:00",
+                "category": "supper"
             }
+
         ],
         "model": "recipe.Recipe",
         "unique_fields": [

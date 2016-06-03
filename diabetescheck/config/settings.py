@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 # db_url =
 
-DATABASES = {'default': dj_database_url.config(env='faithenv', default='postgres://admibn:admin123@localhost:5432/diabetesproject')}
+DATABASES = {'default': dj_database_url.config(env='faithenv', default='postgres://admibn:admin123@localhost:5432/diabetes')}
 print (DATABASES)
 DATABASES['default']['CONN_MAX_AGE'] = 60
 

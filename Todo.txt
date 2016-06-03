@@ -1,0 +1,5 @@
+Milestone 1: 7th March 2016
+----------------------------
+-fixes:
+    - add health_details field to persons.json file
+    - sign up multi-step form(frontend)

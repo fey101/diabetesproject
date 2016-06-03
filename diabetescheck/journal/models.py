@@ -68,35 +68,35 @@ class HealthDetails(models.Model):
         hbw = 21 * (self.height ** 2)
         return round(hbw)
 
-    @property
-    def daily_calorie_need(self):
-        """Amount of calories needed to satisfy activity level lifestyle."""
-        activity = (self.daily_activity_level, self.exercise_freq)
-        if activity == ("in bed", "random"):
-            hbr = 10
-        elif activity == ("low", "random"):
-            hbr = 11
-        elif activity == ("low", "15 min"):
-            hbr = 12
-        elif activity == ("low", "30 min"):
-            hbr = 13
-        elif activity == ("low", "1 hr or more") or activity == (
-                "moderate", "random"):
-                hbr = 14
-        elif activity == ("moderate", "15 min"):
-            hbr = 15
-        elif activity == ("moderate", "30 min"):
-            hbr = 16
-        elif activity == ("moderate", "1 hr or more") or activity == (
-                "high", "random"):
-                hbr = 17
-        elif activity == ("high", "15 min"):
-            hbr = 18
-        elif activity == ("high", "30 min"):
-            hbr = 19
-        elif activity == ("high", "1 hr or more"):
-            hbr = 20
-        return 21 * (self.height ** 2) * hbr
+    # @property
+    # def daily_calorie_need(self):
+    #     """Amount of calories needed to satisfy activity level lifestyle."""
+    #     activity = (self.daily_activity_level, self.exercise_freq)
+    #     if activity == ("in bed", "random"):
+    #         hbr = 10
+    #     elif activity == ("low", "random"):
+    #         hbr = 11
+    #     elif activity == ("low", "15 min"):
+    #         hbr = 12
+    #     elif activity == ("low", "30 min"):
+    #         hbr = 13
+    #     elif activity == ("low", "1 hr or more") or activity == (
+    #             "moderate", "random"):
+    #             hbr = 14
+    #     elif activity == ("moderate", "15 min"):
+    #         hbr = 15
+    #     elif activity == ("moderate", "30 min"):
+    #         hbr = 16
+    #     elif activity == ("moderate", "1 hr or more") or activity == (
+    #             "high", "random"):
+    #             hbr = 17
+    #     elif activity == ("high", "15 min"):
+    #         hbr = 18
+    #     elif activity == ("high", "30 min"):
+    #         hbr = 19
+    #     elif activity == ("high", "1 hr or more"):
+    #         hbr = 20
+    #     return 21 * (self.height ** 2) * hbr
 
     def validate_small_height(self):
         error_msg = "The height value should be positive"
